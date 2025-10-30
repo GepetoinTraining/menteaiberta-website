@@ -1,0 +1,22 @@
+{
+  "title": "Tópicos de Humanas com Múltiplas Perspectivas",
+  "week": 14,
+  "description": "Lista de tópicos de humanas ideais para praticar a análise de diferentes pontos de vista com a IA.",
+  "type": "text-content",
+  "content": {
+    "sections": [
+       {
+        "heading": "História:",
+        "text": "- O papel de Napoleão Bonaparte foi de herói ou tirano?\n- A Revolução Industrial trouxe mais progresso ou desigualdade?\n- As Grandes Navegações foram um ato de descoberta ou de conquista?\n- O impacto da Ditadura Militar no Brasil foi positivo ou negativo para o desenvolvimento do país?"
+      },
+      {
+        "heading": "Sociologia / Filosofia:",
+        "text": "- O voto deveria ser obrigatório no Brasil?\n- A tecnologia nos aproxima ou nos afasta uns dos outros?\n- A meritocracia é um conceito justo na sociedade atual?\n- A inteligência artificial representa uma ameaça ou uma oportunidade para a humanidade?"
+      },
+      {
+        "heading": "Literatura / Artes:",
+        "text": "- Hamlet era louco ou fingia loucura?\n- O final de [Livro/Filme Famoso] é otimista ou pessimista?\n- A arte moderna é elitista ou acessível?\n- Personagens controversos (como Coringa ou Walter White) devem ser vistos como vilões ou anti-heróis?"
+      }
+    ]
+  }
+}

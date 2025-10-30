@@ -1,0 +1,16 @@
+{
+  "title": "Ferramenta: Adaptador de Explicação por Público",
+  "week": 17,
+  "description": "Adapte sua explicação sobre um conceito para diferentes audiências.",
+  "type": "interactive-tool", // Requires a component with input + buttons
+  "content": {
+     "instructions": "Cole sua explicação simplificada sobre um conceito (resultado da Técnica de Feynman) e clique nos botões para adaptá-la a diferentes públicos.",
+     "input_label": "Cole sua explicação simples aqui:",
+     "audiences": [
+        {"id": "especialista", "label": "Adaptar para Especialista", "prompt_template": "Acima está minha explicação simples sobre [SEU CONCEITO]. Agora, atue como um especialista supercrítico no assunto. Reescreva minha explicação para ser tecnicamente precisa e adequada para uma conferência científica."},
+        {"id": "instagram", "label": "Adaptar para Instagram", "prompt_template": "Acima está minha explicação simples sobre [SEU CONCEITO]. Agora, reescreva-a como uma postagem de Instagram, com no máximo 3 parágrafos curtos, emojis e uma linguagem bem casual."},
+        {"id": "avo", "label": "Adaptar para Avó", "prompt_template": "Acima está minha explicação simples sobre [SEU CONCEITO]. Reescreva-a como se estivesse explicando para minha avó, que não entende muito de tecnologia/ciência, usando exemplos do dia a dia dela."}
+     ],
+     "placeholder": "Componente interativo para adaptar explicações ainda em desenvolvimento." // Placeholder if component not ready
+  }
+}

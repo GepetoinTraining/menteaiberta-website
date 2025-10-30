@@ -1,0 +1,18 @@
+{
+  "title": "Ferramenta: Gerador de Materiais de Estudo",
+  "week": 16,
+  "description": "Cole um texto base e use os botões para gerar diferentes formatos de materiais de estudo com a IA.",
+  "type": "interactive-tool", // Requires a component with input + buttons
+  "content": {
+     "instructions": "Cole um texto (ex: capítulo de livro, anotações) abaixo e clique nos botões para gerar materiais de estudo criativos.",
+     "input_label": "Cole o texto base aqui:",
+     "generators": [
+        {"id": "flashcards", "label": "Gerar Flashcards", "prompt_template": "Com base no texto acima, crie [NÚMERO, ex: 10] flashcards no formato 'Frente: [Pergunta]' e 'Verso: [Resposta]'."},
+        {"id": "quiz", "label": "Gerar Quiz", "prompt_template": "Com base no texto acima, crie um quiz de [NÚMERO, ex: 5] perguntas de múltipla escolha, com [X, ex: 4] opções cada e indicando a resposta correta no final."},
+        {"id": "analogias", "label": "Gerar Analogias", "prompt_template": "Qual é a ideia central do texto acima? Gere 3 analogias diferentes para explicá-la."},
+        {"id": "mapa_mental", "label": "Gerar Mapa Mental", "prompt_template": "Organize as informações-chave do texto acima em um mapa mental, usando um sistema de tópicos e subtópicos com recuo."},
+        {"id": "formato_criativo", "label": "Formato Criativo", "prompt_template": "Transforme as informações do texto acima em um formato criativo, como [FORMATO, ex: o roteiro de uma cena de filme, a letra de uma música, uma série de posts de Twitter]."}
+     ],
+     "placeholder": "Componente interativo para gerar materiais de estudo ainda em desenvolvimento." // Placeholder if component not ready
+  }
+}

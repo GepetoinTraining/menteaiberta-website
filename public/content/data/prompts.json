@@ -1,0 +1,212 @@
+[
+  {
+    "id": 1,
+    "lesson": 1,
+    "title": "Prompt Básico: Teste de Personalidade",
+    "category": "Estudo & Aprendizagem",
+    "bestAI": "Any",
+    "aiColor": "#888",
+    "description": "Faça a mesma pergunta para diferentes IAs e compare os estilos de resposta.",
+    "prompt": "Como posso me preparar melhor para o ENEM em Matemática?"
+  },
+  {
+    "id": 6,
+    "lesson": 4,
+    "title": "O Criador de Cronogramas",
+    "category": "Produtividade",
+    "bestAI": "ChatGPT",
+    "aiColor": "#10a37f",
+    "description": "Organize seus estudos com um plano estruturado e realista.",
+    "prompt": "Preciso criar um cronograma de estudos para [MATÉRIA/PROVA] que acontece em [TEMPO DISPONÍVEL]. Tenho [X HORAS POR DIA] disponíveis. Atue como um tutor experiente e crie um plano realista e eficiente, dividido por dias."
+  },
+  {
+    "id": 9,
+    "lesson": 7,
+    "title": "Deconstrutor de Prompt (Ex. 1A)",
+    "category": "Engenharia de Prompt",
+    "bestAI": "Any",
+    "aiColor": "#888",
+    "description": "Analise este prompt para identificar Papel, Tarefa e Formato.",
+    "prompt": "Atue como um nutricionista. Liste os 5 melhores alimentos para o café da manhã para um estudante adolescente. Apresente a lista em formato de bullet points."
+  },
+  {
+    "id": 10,
+    "lesson": 7,
+    "title": "Gerador de Prompt Estruturado",
+    "category": "Engenharia de Prompt",
+    "bestAI": "ChatGPT",
+    "aiColor": "#10a37f",
+    "description": "Use para montar rapidamente um prompt com Papel, Tarefa e Formato.",
+    "prompt": "Preciso de ajuda com [TAREFA ESPECÍFICA]. Atue como [PAPEL/PERSONA]. Apresente a resposta em formato de [FORMATO DESEJADO]."
+  },
+  {
+    "id": 11,
+    "lesson": 8,
+    "title": "Construtor de Prompt C.R.A.F.T.",
+    "category": "Engenharia de Prompt",
+    "bestAI": "Claude",
+    "aiColor": "#00D1D1",
+    "description": "Estruture um prompt completo usando Contexto, Papel, Ação, Formato e Tom.",
+    "prompt": "(Contexto) [INFORME O CONTEXTO NECESSÁRIO AQUI]. (Role) Atue como [PAPEL/PERSONA]. (Action) Sua tarefa é [AÇÃO/TAREFA ESPECÍFICA]. (Format) Apresente a resposta em formato de [FORMATO DESEJADO]. (Tone) O tom deve ser [TOM DESEJADO]."
+  },
+  {
+    "id": 12,
+    "lesson": 10,
+    "title": "Gerador de Escopo Mínimo Viável (MVS)",
+    "category": "Projetos & Inovação",
+    "bestAI": "ChatGPT",
+    "aiColor": "#10a37f",
+    "description": "Defina o essencial para la primeira versão de um projeto.",
+    "prompt": "Atue como um gerente de projetos focado em eficiência (ou desenvolvedor web focado em lançamentos rápidos). Meu projeto é [DESCRIÇÃO DO PROJETO] e tenho [PRAZO]. Quais são os 3-4 componentes/funcionalidades absolutamente essenciais para que este projeto seja considerado um sucesso inicial? Tudo mais é bônus para o futuro."
+  },
+  {
+    "id": 7,
+    "lesson": 11,
+    "title": "O Corretor de Redação (Refinamento)",
+    "category": "Criatividade & Escrita",
+    "bestAI": "Gemini",
+    "aiColor": "#4285f4",
+    "description": "Receba feedback construtivo sobre seus textos para melhoria iterativa.",
+    "prompt": "Escrevi uma redação (ou parágrafo) sobre [TEMA] e preciso de feedback para refinar. Analise o texto abaixo e aponte: 1) Pontos fortes; 2) O que pode melhorar; 3) Sugestões específicas de como aprimorar. Seja honesto mas construtivo.\n\n[COLE SEU TEXTO AQUI]"
+  },
+  {
+    "id": 13,
+    "lesson": 11,
+    "title": "Laboratório de Refinamento (Texto Base)",
+    "category": "Engenharia de Prompt",
+    "bestAI": "Any",
+    "aiColor": "#888",
+    "description": "Use este texto base para praticar diferentes prompts de refinamento.",
+    "prompt": "A internet é importante. Ela conecta pessoas de todos os lugares. Muitas coisas podem ser feitas online, como estudar e comprar. É uma ferramenta útil para la vida moderna."
+  },
+  {
+    "id": 14,
+    "lesson": 11,
+    "title": "Prompt de Refinamento: Simplificar",
+    "category": "Engenharia de Prompt",
+    "bestAI": "Claude",
+    "aiColor": "#00D1D1",
+    "description": "Use após colar um texto para torná-lo mais fácil de entender.",
+    "prompt": "Simplifique a linguagem na [FRASE ESPECÍFICA OU PARÁGRAFO ACIMA], está muito técnica."
+  },
+  {
+    "id": 15,
+    "lesson": 11,
+    "title": "Prompt de Refinamento: Expandir",
+    "category": "Engenharia de Prompt",
+    "bestAI": "ChatGPT",
+    "aiColor": "#10a37f",
+    "description": "Use após colar um texto para adicionar mais detalhes a uma ideia.",
+    "prompt": "Expanda a ideia de \"[IDEIA NO TEXTO]\" com mais detalhes ou um exemplo prático."
+  },
+  {
+    "id": 16,
+    "lesson": 11,
+    "title": "Prompt de Refinamento: Mudar Tom",
+    "category": "Engenharia de Prompt",
+    "bestAI": "Claude",
+    "aiColor": "#00D1D1",
+    "description": "Use após colar um texto para ajustar o tom de voz.",
+    "prompt": "Reescreva o [TEXTO ACIMA] com um tom mais [engraçado/sério/inspirador/confiante/...]."
+  },
+  {
+    "id": 17,
+    "lesson": 11,
+    "title": "Prompt de Refinamento: Advogado do Diabo",
+    "category": "Pensamento Crítico",
+    "bestAI": "Gemini",
+    "aiColor": "#4285f4",
+    "description": "Use após colar um texto argumentativo para encontrar falhas lógicas.",
+    "prompt": "Atue como um 'advogado do diabo' e um debatedor cético. Abaixo está um texto. Sua tarefa é encontrar as falhas lógicas, os pontos fracos e as generalizações no argumento. Apresente seu feedback em bullet points."
+  },
+  {
+    "id": 18,
+    "lesson": 14,
+    "title": "Tutor Socrático (Exatas)",
+    "category": "Estudo & Aprendizagem",
+    "bestAI": "Claude",
+    "aiColor": "#00D1D1",
+    "description": "Receba ajuda passo a passo para resolver problemas de exatas, sem receber a resposta final.",
+    "prompt": "Atue como um tutor de [MATEMÁTICA/FÍSICA/QUÍMICA] socrático. Meu objetivo é resolver o seguinte problema: [COLE SEU PROBLEMA AQUI]. Não me dê a resposta. Em vez disso, comece me fazendo a primeira pergunta que me ajudará a dar o primeiro passo."
+  },
+   {
+    "id": 19,
+    "lesson": 15,
+    "title": "Verificador de Fatos: Cite Suas Fontes",
+    "category": "Pesquisa & Verificação",
+    "bestAI": "Gemini",
+    "aiColor": "#4285f4",
+    "description": "Peça à IA para fornecer fontes que comprovem uma afirmação que ela fez.",
+    "prompt": "Para a afirmação \"[COLE UMA AFIRMAÇÃO DA IA AQUI]\", você pode me fornecer um link para um estudo ou um artigo de uma fonte confiável que comprove isso?"
+  },
+  {
+    "id": 8,
+    "lesson": 16,
+    "title": "O Gerador de Questões de Estudo",
+    "category": "Estudo & Aprendizagem",
+    "bestAI": "ChatGPT",
+    "aiColor": "#10a37f",
+    "description": "Crie questões para testar seu próprio conhecimento a partir de um texto.",
+    "prompt": "Com base no texto que forneci abaixo, crie um quiz de [NÚMERO] perguntas de múltipla escolha para testar meu entendimento. Inclua [X] opções por pergunta e indique a resposta correta no final.\n\n[COLE O TEXTO AQUI]"
+  },
+  {
+    "id": 21,
+    "lesson": 17,
+    "title": "Simulador de Feynman (Ensinar para Criança)",
+    "category": "Estudo & Aprendizagem",
+    "bestAI": "Claude",
+    "aiColor": "#00D1D1",
+    "description": "Pratique explicar um conceito complexo de forma simples.",
+    "prompt": "Vamos praticar a Técnica de Feynman. Atue como uma criança de 10 anos, curiosa mas que se distrai facilmente. Eu vou tentar te explicar o conceito de [SEU CONCEITO]. Depois da minha explicação, me faça perguntas simples como uma criança faria, apontando as partes que você não entendeu ou que pareceram muito complicadas."
+  },
+   {
+    "id": 20,
+    "lesson": 20,
+    "title": "Sparring de Pensamento Crítico (Notícia)",
+    "category": "Pensamento Crítico",
+    "bestAI": "Gemini",
+    "aiColor": "#4285f4",
+    "description": "Analise criticamente uma notícia recente com a ajuda da IA.",
+    "prompt": "Atue como um jornalista investigativo cético, aplicando o pensamento crítico. Acabei de ler a seguinte notícia: [COLE O TÍTULO E O PRIMEIRO PARÁGRAFO DA NOTÍCIA]. Faça 5 perguntas investigativas que me ajudem a analisar esta notícia de forma mais profunda. As perguntas devem focar em identificar o viés, questionar as fontes, considerar outras perspectivas e avaliar as evidências apresentadas."
+  },
+  {
+    "id": 22,
+    "lesson": 20,
+    "title": "Gerador de Usos Inesperados (Criatividade)",
+    "category": "Criatividade & Escrita",
+    "bestAI": "Claude",
+    "aiColor": "#00D1D1",
+    "description": "Pratique pensamento divergente para gerar ideias criativas.",
+    "prompt": "Vamos fazer um exercício de criatividade. O objeto é um [OBJETO COMUM, EX: CLIPE DE PAPEL]. Atue como um inventor e designer. Liste 20 usos completamente novos e inesperados para este objeto, indo além da sua função óbvia."
+  },
+   {
+    "id": 23,
+    "lesson": 22,
+    "title": "Brainstorm de Soluções (Baseado em User Story)",
+    "category": "Projetos & Inovação",
+    "bestAI": "Claude",
+    "aiColor": "#00D1D1",
+    "description": "Gere diferentes conceitos de solução para uma necessidade de usuário.",
+    "prompt": "Atue como um time de inovação (um engenheiro, um designer e um gerente de produto). A 'User Story' que precisamos resolver é: '[COLE A SUA USER STORY AQUI]'. Façam um brainstorm e gerem 5 soluções-conceito completamente diferentes para resolver esta necessidade. Uma deve ser um app, outra um serviço físico, uma terceira uma peça de conteúdo, e as outras duas, ideias malucas."
+  },
+  {
+    "id": 24,
+    "lesson": 22,
+    "title": "Definição de MVP (Produto Mínimo Viável)",
+    "category": "Projetos & Inovação",
+    "bestAI": "ChatGPT",
+    "aiColor": "#10a37f",
+    "description": "Identifique as funcionalidades essenciais para la primeira versão de um produto/solução.",
+    "prompt": "Atue como um gerente de produto focado na filosofia MVP. Minha ideia de solução é [DESCREVA SUA IDEIA]. O objetivo é resolver a necessidade principal da minha persona, [NOME DA PERSONA]. Quais são as 2 ou 3 funcionalidades absolutamente essenciais para la primeira versão (o 'skate')? E quais 5 funcionalidades 'legais' eu deveria deixar para o futuro ('patinete', 'bicicleta', etc.)?"
+  },
+  {
+    "id": 25,
+    "lesson": 23,
+    "title": "Roteiro de Entrevista de Feedback (UX)",
+    "category": "Projetos & Inovação",
+    "bestAI": "Claude",
+    "aiColor": "#00D1D1",
+    "description": "Crie perguntas abertas para validar um protótipo com usuários.",
+    "prompt": "Atue como uma pesquisadora de UX sênior. Eu criei um protótipo de [SUA SOLUÇÃO] para resolver o problema de [SEU PROBLEMA]. Eu vou mostrar o protótipo para um usuário em potencial pela primeira vez. Crie um roteiro de entrevista de feedback para mim com 5 a 7 perguntas abertas. As perguntas não devem guiar o usuário, mas sim incentivá-lo a pensar em voz alta e dar feedback honesto. Inclua uma boa pergunta de abertura e uma de encerramento."
+  }
+]

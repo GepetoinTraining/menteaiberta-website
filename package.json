@@ -1,0 +1,32 @@
+{
+  "name": "menteaberta-website",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@mantine/core": "^7.5.0",
+    "@mantine/form": "^7.11.1",
+    "@mantine/hooks": "^7.5.0",
+    "@tabler/icons-react": "^2.47.0",
+    "qr-scanner": "^1.4.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.22.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.55",
+    "@types/react-dom": "^18.2.19",
+    "@vitejs/plugin-react": "^4.2.1",
+    "postcss": "^8.4.35",
+    "postcss-preset-mantine": "^1.12.3",
+    "postcss-simple-vars": "^7.0.1",
+    "vite": "^7.1.9"
+  }
+}

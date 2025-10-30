@@ -1,0 +1,17 @@
+{
+  "title": "Ferramenta: Tradutor de Estilos de Aprendizagem",
+  "week": 13,
+  "description": "Adapte uma explicação para diferentes estilos de aprendizagem VARK.",
+  "type": "interactive-tool", // Requires a component with input + buttons
+  "content": {
+     "instructions": "Cole uma explicação sobre um conceito abaixo e clique nos botões para 'traduzi-la' para diferentes estilos de aprendizagem.",
+     "input_label": "Cole a explicação aqui:",
+     "styles": [
+        {"id": "v", "label": "Visual", "prompt_template": "Transforme a explicação acima em uma descrição de um infográfico ou mapa mental."},
+        {"id": "a", "label": "Auditivo", "prompt_template": "Reescreva a explicação acima como o roteiro de um podcast curto e informativo."},
+        {"id": "r", "label": "Leitor/Escritor", "prompt_template": "Resuma a explicação acima em 5 bullet points claros e concisos."},
+        {"id": "k", "label": "Cinestésico", "prompt_template": "Crie uma analogia do mundo real ou um pequeno experimento caseiro para demonstrar o conceito explicado acima."}
+     ],
+     "placeholder": "Componente interativo para traduzir textos para estilos VARK ainda em desenvolvimento." // Placeholder if component not ready
+  }
+}

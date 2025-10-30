@@ -1,0 +1,95 @@
+{
+  "semana1-quiz": {
+    "title": "Qual IA combina com seu estilo de aprendizagem?",
+    "week": 1,
+    "resultType": "personality",
+    "questions": [
+      {
+        "id": 1,
+        "question": "Quando você precisa estudar para uma prova, você prefere:",
+        "options": [
+          { "value": "a", "label": "Resumos bem estruturados e organizados", "ai": "ChatGPT" },
+          { "value": "b", "label": "Vídeos explicativos e exemplos visuais", "ai": "Gemini" },
+          { "value": "c", "label": "Discutir o tema com alguém para clarear ideias", "ai": "Claude" }
+        ]
+      },
+      {
+        "id": 2,
+        "question": "Ao começar um projeto escolar, você costuma:",
+        "options": [
+          { "value": "a", "label": "Fazer um cronograma detalhado antes de começar", "ai": "ChatGPT" },
+          { "value": "b", "label": "Buscar inspiração em várias fontes diferentes", "ai": "Gemini" },
+          { "value": "c", "label": "Experimentar algumas ideias e ver o que funciona", "ai": "Claude" }
+        ]
+      },
+      {
+        "id": 3,
+        "question": "Quando lê um texto difícil, você prefere:",
+        "options": [
+          { "value": "a", "label": "Destrinchar parágrafo por parágrafo com atenção", "ai": "ChatGPT" },
+          { "value": "b", "label": "Conectar com coisas que já conhece", "ai": "Gemini" },
+          { "value": "c", "label": "Reformular com suas próprias palavras", "ai": "Claude" }
+        ]
+      },
+      {
+        "id": 4,
+        "question": "Para memorizar conteúdo, você funciona melhor com:",
+        "options": [
+          { "value": "a", "label": "Listas organizadas e mapas mentais estruturados", "ai": "ChatGPT" },
+          { "value": "b", "label": "Analogias e comparações criativas", "ai": "Gemini" },
+          { "value": "c", "label": "Ensinar o conteúdo para alguém", "ai": "Claude" }
+        ]
+      },
+      {
+        "id": 5,
+        "question": "Diante de um problema complexo, você:",
+        "options": [
+          { "value": "a", "label": "Divide em partes menores e resolve uma por vez", "ai": "ChatGPT" },
+          { "value": "b", "label": "Procura padrões ou soluções similares", "ai": "Gemini" },
+          { "value": "c", "label": "Faz perguntas até entender o contexto todo", "ai": "Claude" }
+        ]
+      }
+    ],
+    "aiProfiles": {
+      "ChatGPT": { "name": "ChatGPT", "description": "Estruturado e professoral", "tips": ["Ótimo para explicações passo a passo", "Excelente para criar cronogramas e planos de estudo", "Ideal quando você precisa de estrutura e organização"], "color": "#10a37f" },
+      "Gemini": { "name": "Gemini", "description": "Analítico e conectivo", "tips": ["Excelente para pesquisa e análise de informações", "Conecta conceitos de múltiplas fontes", "Ideal para entender contextos amplos e relações entre ideias"], "color": "#4285f4" },
+      "Claude": { "name": "Claude", "description": "Conversacional e iterativo", "tips": ["Ótimo para brainstorming e refinamento de ideias", "Conversação natural e colaborativa", "Ideal para explorar tópicos de forma criativa"], "color": "#00D1D1" }
+    }
+  },
+  "semana2-puzzle": {
+    "title": "Quebra-Cabeças Lógicos",
+    "week": 2,
+    "resultType": "correctIncorrect",
+    "questions": [
+      { "id": 1, "question": "Se estou em uma corrida e ultrapasso o segundo colocado, em que posição eu fico?", "options": [{ "value": "a", "label": "Primeiro" }, { "value": "b", "label": "Segundo" }, { "value": "c", "label": "Terceiro" }], "correctAnswer": "b", "explanation": "Se você ultrapassa o segundo, você assume a posição dele." },
+      { "id": 2, "question": "O pai de Maria tem 5 filhas: Lala, Lele, Lili, Lolo e... qual o nome da quinta filha?", "options": [{ "value": "a", "label": "Lulu" }, { "value": "b", "label": "Lila" }, { "value": "c", "label": "Maria" }], "correctAnswer": "c", "explanation": "A pergunta começa falando sobre o pai de Maria." }
+    ]
+  },
+  "semana13-diagnostico": {
+    "title": "Diagnóstico de Estilo de Aprendizagem",
+    "week": 13,
+    "resultType": "vark",
+    "questions": [
+      { "id": 1, "question": "Quando você monta um móvel, você prefere...", "options": [{ "value": "v", "label": "Ver os diagramas" }, { "value": "a", "label": "Ouvir um vídeo tutorial" }, { "value": "r", "label": "Ler o manual" }, { "value": "k", "label": "Ir tentando encaixar as peças" }] },
+      { "id": 2, "question": "Para aprender uma nova receita, você prefere...", "options": [{ "value": "v", "label": "Ver fotos do processo" }, { "value": "a", "label": "Ouvir alguém explicar" }, { "value": "r", "label": "Ler o passo a passo" }, { "value": "k", "label": "Cozinhar junto com alguém" }] },
+      { "id": 3, "question": "Numa aula, o que te ajuda mais:", "options": [{ "value": "v", "label": "Os slides do professor"}, { "value": "a", "label": "A explicação verbal"}, { "value": "r", "label": "Fazer suas próprias anotações"}, { "value": "k", "label": "A parte prática do laboratório"}] },
+      { "id": 4, "question": "Como você daria direções para um amigo:", "options": [{ "value": "v", "label": "Desenhando um mapa"}, { "value": "a", "label": "Explicando verbalmente"}, { "value": "r", "label": "Escrevendo uma lista de ruas"}, { "value": "k", "label": "Guiando-o pessoalmente"}] }
+    ],
+    "varkProfiles": {
+      "v": { "name": "Visual", "description": "Aprende melhor vendo.", "techniques": ["Mapas mentais", "Gráficos", "Vídeos"] },
+      "a": { "name": "Auditivo", "description": "Aprende melhor ouvindo.", "techniques": ["Discussões", "Podcasts", "Gravar aulas"] },
+      "r": { "name": "Leitor/Escritor", "description": "Aprende melhor lendo/escrevendo.", "techniques": ["Anotações", "Resumos", "Listas"] },
+      "k": { "name": "Cinestésico", "description": "Aprende melhor fazendo.", "techniques": ["Experimentos", "Exemplos práticos", "Simulações"] }
+    }
+  },
+  "semana15-verdadeiro-falso": {
+    "title": "Verdadeiro ou Falso? (Verificação de Fatos)",
+    "week": 15,
+    "resultType": "correctIncorrect",
+    "questions": [
+       { "id": 1, "question": "Afirmação da IA: 'O Brasil é o maior produtor de café do mundo.'", "options": [{ "value": "t", "label": "Verdadeiro" }, { "value": "f", "label": "Falso" }], "correctAnswer": "t", "explanation": "Sim, o Brasil é historicamente o maior produtor e exportador de café." },
+       { "id": 2, "question": "Afirmação da IA: 'A Muralha da China é a única construção humana visível do espaço a olho nu.'", "options": [{ "value": "t", "label": "Verdadeiro" }, { "value": "f", "label": "Falso" }], "correctAnswer": "f", "explanation": "Isso é um mito popular. Nenhuma construção humana é visível do espaço a olho nu sem auxílio." }
+       // Add 3 more fact-checking questions
+    ]
+  }
+}

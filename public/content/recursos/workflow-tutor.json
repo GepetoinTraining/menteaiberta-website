@@ -1,0 +1,36 @@
+{
+  "title": "Workflow Interativo: O Tutor Instantâneo",
+  "week": 4,
+  "description": "Execute passo a passo o workflow 'O Tutor Instantâneo' para aprender um conceito novo rapidamente. Copie os prompts e cole na sua IA de preferência.",
+  "type": "interactive-workflow", // You might create a specific renderer for this later
+  "content": {
+    "objective": "Entender o básico sobre 'Buracos Negros' em 10 minutos.",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Simplificar",
+        "action": "Peça à sua IA de texto:",
+        "prompt": "Explique o que é um buraco negro como se eu tivesse 10 anos."
+      },
+      {
+        "step": 2,
+        "title": "Analogia",
+        "action": "Peça:",
+        "prompt": "Agora, me dê uma analogia para ajudar a entender a gravidade de um buraco negro."
+      },
+      {
+        "step": 3,
+        "title": "Visualizar",
+        "action": "Peça a uma IA de imagem:",
+        "prompt": "Gere uma imagem simples e educativa de um buraco negro distorcendo o espaço-tempo."
+      },
+      {
+        "step": 4,
+        "title": "Testar",
+        "action": "Volte para a IA de texto e peça:",
+        "prompt": "Crie 3 perguntas de múltipla escolha para testar se eu entendi o conceito."
+      }
+    ]
+    // You could add a 'result' field here later if the component handles execution
+  }
+}

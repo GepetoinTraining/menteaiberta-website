@@ -1,0 +1,19 @@
+{
+  "erros-ia-L2": { "week": 2, "title": "Erros Engraçados de IAs (Playlist)", "description": "Veja exemplos de alucinações e erros comuns da IA de forma divertida.", "youtubeId": "PLAYLIST_ID_HERE" },
+  "stacking-L3": { "week": 3, "title": "Tutoriais de Stacking de Ferramentas (Playlist)", "description": "Aprenda como combinar diferentes ferramentas de IA para resultados melhores.", "youtubeId": "PLAYLIST_ID_HERE" },
+  "workflow-prod-L4": { "week": 4, "title": "Workflow de IA para Produtividade", "description": "Veja um exemplo real de como um criador usa IA para planejar a semana.", "youtubeId": "VIDEO_ID_HERE" },
+  "truques-visao-L5": { "week": 5, "title": "Truques de Visão Computacional", "description": "Descubra capacidades surpreendentes da IA em analisar imagens.", "youtubeId": "VIDEO_ID_HERE" },
+  "ted-pitch-L6": { "week": 6, "title": "A Arte de Fazer Pitches Curtos (TED)", "description": "Aprenda com especialistas como comunicar ideias de forma impactante e concisa.", "youtubeId": "VIDEO_ID_HERE" },
+  "kanban-L9": { "week": 9, "title": "Tutorial Ferramenta Kanban (Trello)", "description": "Aprenda a usar quadros Kanban para visualizar e gerenciar seus projetos.", "youtubeId": "VIDEO_ID_HERE" },
+  "processo-escrita-L11": { "week": 11, "title": "Processo Real de Escrita e Rascunho", "description": "Veja como criadores de conteúdo usam rascunhos e refinamento.", "youtubeId": "VIDEO_ID_HERE" },
+  "josh-kaufman-L12": { "week": 12, "title": "As Primeiras 20 Horas (Josh Kaufman)", "description": "Aprenda sobre técnicas de aprendizado acelerado.", "youtubeId": "VIDEO_ID_HERE" },
+  "teded-estilos-L13": { "week": 13, "title": "Estilos de Aprendizagem (TED-Ed)", "description": "Entenda a ciência por trás das diferentes formas de aprender.", "youtubeId": "VIDEO_ID_HERE" },
+  "ciencia-visual-L14": { "week": 14, "title": "Canais de Ciência Visual (Playlist)", "description": "Inspire-se em canais que usam analogias visuais para ensinar.", "youtubeId": "PLAYLIST_ID_HERE" },
+  "feynman-L16": { "week": 16, "title": "A Técnica de Feynman", "description": "Entenda como a técnica funciona na prática.", "youtubeId": "VIDEO_ID_HERE" },
+  "feynman-original-L17": { "week": 17, "title": "Origem da Técnica de Feynman", "description": "Veja uma explicação animada sobre Richard Feynman e sua técnica.", "youtubeId": "VIDEO_ID_HERE" },
+  "ted-comunicacao-L18": { "week": 18, "title": "Como Tornar Ideias Complexas Memoráveis (TED)", "description": "Aprenda técnicas de comunicação eficaz para ensinar.", "youtubeId": "VIDEO_ID_HERE" },
+  "4cs-L20": { "week": 20, "title": "A Importância dos 4 Cs", "description": "Entenda por que Pensamento Crítico, Criatividade, Comunicação e Colaboração são essenciais.", "youtubeId": "VIDEO_ID_HERE" },
+  "mvp-dropbox-L22": { "week": 22, "title": "O Conceito de MVP (Exemplo Dropbox)", "description": "Veja como a Dropbox usou um MVP simples para validar sua ideia.", "youtubeId": "VIDEO_ID_HERE" },
+  "ycombinator-L23": { "week": 23, "title": "A Importância de Falar com Usuários (Y Combinator)", "description": "Aprenda com especialistas em startups por que o feedback é crucial.", "youtubeId": "VIDEO_ID_HERE" },
+  "pitch-disrupt-L24": { "week": 24, "title": "Exemplo de Pitch (TechCrunch Disrupt)", "description": "Veja um exemplo real de um pitch de 3 minutos em uma competição.", "youtubeId": "VIDEO_ID_HERE" }
+}

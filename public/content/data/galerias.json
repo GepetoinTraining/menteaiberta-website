@@ -1,0 +1,62 @@
+{
+  "graficos-ibge-L5": {
+    "title": "Gráficos e Infográficos (Exemplos)",
+    "week": 5,
+    "description": "Exemplos de gráficos de fontes como IBGE para praticar análise visual com IA.",
+    "items": [
+      { "src": "/images/galerias/grafico_ibge_1.png", "caption": "Exemplo de gráfico de barras sobre população." },
+      { "src": "/images/galerias/grafico_pizza_exemplo.png", "caption": "Gráfico de pizza sobre distribuição setorial." }
+      // Add more image paths and captions
+    ]
+  },
+  "antes-depois-L7": {
+    "title": "Otimização de Prompts: Antes e Depois",
+    "week": 7,
+    "description": "Compare os resultados de prompts vagos versus prompts otimizados.",
+    "items": [
+      { "src": "/images/galerias/prompt_antes_1.png", "caption": "Resultado de prompt vago: 'fale sobre marketing digital'." },
+      { "src": "/images/galerias/prompt_depois_1.png", "caption": "Resultado de prompt otimizado com Papel, Tarefa e Formato." }
+      // Add more pairs
+    ]
+  },
+  "exemplos-tom-L8": {
+    "title": "Impacto do Tom na Resposta da IA",
+    "week": 8,
+    "description": "Veja como a mesma pergunta gera respostas diferentes ao mudar apenas o Tom no C.R.A.F.T.",
+    "items": [
+       { "src": "/images/galerias/tom_formal.png", "caption": "Email para professor com tom formal." },
+       { "src": "/images/galerias/tom_casual.png", "caption": "Mesmo email, mas com tom casual." }
+       // Add more examples
+    ]
+  },
+  "galeria-criativa-L16": {
+    "title": "Exemplos Criativos Gerados por IA",
+    "week": 16,
+    "description": "Inspire-se com formatos criativos gerados pela IA a partir de conteúdo factual.",
+    "items": [
+      { "src": "/images/galerias/historia_twitter.png", "caption": "Revolução Francesa como posts de Twitter." },
+      { "src": "/images/galerias/ciclo_agua_rap.png", "caption": "Ciclo da água como letra de rap." }
+      // Add more creative examples
+    ]
+  },
+  "kits-aprendizagem-L18": {
+     "title": "Exemplos de Kits de Aprendizagem",
+     "week": 18,
+     "description": "Inspiração para criar seu kit de aprendizagem de uma página.",
+     "items": [
+        { "src": "/images/galerias/kit_genetica.png", "caption": "Exemplo de kit sobre Genética Mendeliana." },
+        { "src": "/images/galerias/kit_historia.png", "caption": "Exemplo de kit sobre um evento histórico." }
+        // Add more kit examples
+     ]
+  },
+  "one-pagers-L24": {
+    "title": "Exemplos de One-Pagers de Inovação",
+    "week": 24,
+    "description": "Inspire-se com resumos visuais de projetos de inovação.",
+    "items": [
+      { "src": "/images/galerias/onepager_exemplo1.png", "caption": "Exemplo de One-Pager para um app educacional." },
+      { "src": "/images/galerias/onepager_exemplo2.png", "caption": "Exemplo de One-Pager para um projeto social." }
+      // Add more examples
+    ]
+  }
+}

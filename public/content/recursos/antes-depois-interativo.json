@@ -1,0 +1,24 @@
+{
+  "title": "Ferramenta: Antes e Depois do Refinamento",
+  "week": 11,
+  "description": "Veja visualmente o impacto da melhoria iterativa em um texto.",
+  "type": "interactive-tool", // Or a more specific type
+  "content": {
+    "instructions": "Veja abaixo como um texto simples pode ser transformado com prompts de refinamento.",
+    "before": {
+      "title": "Texto Original (Sem Graça)",
+      "text": "A internet é importante. Ela conecta pessoas de todos os lugares. Muitas coisas podem ser feitas online, como estudar e comprar. É uma ferramenta útil para a vida moderna."
+    },
+    "after": {
+      "title": "Texto Refinado (Exemplo)",
+      "text": "A internet revolucionou nosso mundo, tecendo uma rede invisível que conecta bilhões de vidas instantaneamente. Do aprendizado colaborativo ao comércio global, o universo online se tornou uma extensão indispensável da experiência humana, uma ferramenta poderosa moldando o futuro da sociedade."
+    },
+    "prompts_used": [ // Example prompts that could lead to the 'after' text
+      "Torne a primeira frase mais impactante.",
+      "Substitua 'Muitas coisas' por exemplos mais fortes.",
+      "Melhore o vocabulário, usando palavras como 'revolucionou', 'tecer', 'indispensável'.",
+      "Reescreva o parágrafo com um tom mais inspirador e focado no impacto."
+    ],
+     "placeholder": "Componente interativo para comparar textos lado a lado ainda em desenvolvimento." // Placeholder if component not ready
+  }
+}

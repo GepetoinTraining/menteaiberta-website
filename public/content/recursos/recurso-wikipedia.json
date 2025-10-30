@@ -1,0 +1,14 @@
+{
+  "title": "Texto Exemplo: Floresta Amazônica (Wikipedia)",
+  "week": 2,
+  "description": "Texto base da Wikipedia sobre a Floresta Amazônica para ser usado no Exercício 1 (Teste de Força - Reescrita) da Semana 2.",
+  "type": "text-content",
+  "content": {
+    "sections": [
+      {
+        "heading": "Floresta Amazônica (Trecho)",
+        "text": "A Floresta Amazônica é uma floresta latifoliada úmida que cobre a maior parte da Bacia Amazônica da América do Sul. Esta bacia abrange 7 000 000 km², dos quais 5 500 000 km² são cobertos pela floresta tropical. Esta região inclui territórios pertencentes a nove nações. A maioria da floresta está contida dentro do Brasil, com 60% da floresta, seguida pelo Peru com 13%, Colômbia com 10% e com quantidades menores na Venezuela, Equador, Bolívia, Guiana, Suriname e França (Guiana Francesa). A Amazônia representa mais da metade das florestas tropicais remanescentes no planeta e compreende a maior biodiversidade em uma floresta tropical no mundo. É uma das seis grandes biomas brasileiros."
+      }
+    ]
+  }
+}

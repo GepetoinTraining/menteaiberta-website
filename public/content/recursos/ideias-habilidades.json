@@ -1,0 +1,22 @@
+{
+  "title": "Inspiração: Ideias de 'Habilidades Impossíveis'",
+  "week": 12,
+  "description": "Lista de ideias para inspirar sua escolha de habilidade para o Desafio Capstone do Módulo 2.",
+  "type": "text-content",
+  "content": {
+    "sections": [
+      {
+        "heading": "Habilidades Manuais / Artísticas:",
+        "text": "- Resolver um Cubo Mágico\n- Desenhar um rosto realista a lápis\n- Fazer um truque de mágica simples\n- Tocar os 5 primeiros acordes de uma música no violão/teclado\n- Fazer um origami complexo\n- Aprender Caligrafia básica\n- Fazer embaixadinhas (10 seguidas)\n- Cozinhar um prato específico (ex: Omelete Francês perfeito)"
+      },
+       {
+        "heading": "Habilidades Digitais / Técnicas:",
+        "text": "- Criar uma página HTML simples\n- Editar um vídeo curto (1 min) com cortes e música\n- Fazer um filtro básico no Instagram/TikTok\n- Usar fórmulas básicas no Excel/Google Sheets\n- Criar um bot simples no Discord\n- Entender e explicar como funciona o Blockchain (nível básico)"
+      },
+      {
+        "heading": "Habilidades de Conhecimento / Linguagem:",
+        "text": "- Memorizar os 20 primeiros dígitos de Pi\n- Aprender 30 frases básicas em um novo idioma\n- Identificar 5 constelações no céu noturno\n- Explicar a Teoria da Relatividade de Einstein de forma simples\n- Resumir um livro complexo em 5 minutos\n- Aprender a ler partitura musical básica"
+      }
+    ]
+  }
+}

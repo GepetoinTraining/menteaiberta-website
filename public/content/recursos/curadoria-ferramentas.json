@@ -1,0 +1,30 @@
+{
+  "title": "Curadoria de Ferramentas de IA",
+  "week": 3,
+  "description": "Uma lista inicial de ferramentas de IA populares e (muitas vezes) gratuitas, organizadas por categoria, para ajudar a montar seu Toolkit.",
+  "type": "text-content",
+  "content": {
+    "sections": [
+      {
+        "heading": "Geradores de Imagem",
+        "text": "- **Microsoft Copilot Designer (Bing Image Creator):** Integrado ao Copilot/Bing Chat, usa DALL-E 3. Gratuito com créditos diários.\n- **Adobe Firefly:** Focado em uso comercial seguro, boa qualidade. Gratuito com limites, integrado à suíte Adobe.\n- **Midjourney:** Alta qualidade artística, funciona via Discord. Pago.\n- **Stable Diffusion (Online):** Várias plataformas online oferecem acesso gratuito com limitações (ex: DreamStudio Lite, Leonardo.ai)."
+      },
+      {
+        "heading": "Assistentes de Escrita/Texto (Chatbots)",
+        "text": "- **ChatGPT (OpenAI):** O mais conhecido, versátil, bom para explicações e estruturação. Versão gratuita (GPT-3.5) e paga (GPT-4).\n- **Gemini (Google):** Forte em pesquisa, conexão com serviços Google, análise de dados. Gratuito.\n- **Claude (Anthropic):** Ótimo para escrita criativa, conversação, resumo de textos longos. Gratuito com limites.\n- **Microsoft Copilot:** Integração com Windows e Office, usa modelos da OpenAI. Gratuito."
+      },
+      {
+        "heading": "Ferramentas de Áudio/Música",
+        "text": "- **Suno AI:** Gera músicas completas (com voz e instrumentos) a partir de texto. Gratuito com limites.\n- **ElevenLabs:** Clonagem de voz e Text-to-Speech (leitura de texto) com alta qualidade. Gratuito com limites.\n- **Audacity (com Plugins AI):** Editor de áudio gratuito que pode ter plugins de IA para redução de ruído, etc."
+      },
+      {
+        "heading": "Ferramentas de Vídeo",
+        "text": "- **RunwayML:** Plataforma com várias ferramentas de IA para vídeo (Gen-2 para texto-para-vídeo). Gratuito com limites.\n- **CapCut (Funções IA):** Editor de vídeo popular com funções de IA para legendas automáticas, remoção de fundo, etc. Gratuito.\n- **Synthesia / HeyGen:** Criação de avatares falantes a partir de texto. Geralmente pago."
+      },
+      {
+        "heading": "Outras Categorias Úteis",
+        "text": "- **Removedores de Fundo (remove.bg):** Remove fundo de imagens.\n- **Transcrição de Áudio (Whisper, etc.):** Transcreve fala em texto.\n- **Ferramentas de Apresentação (Gamma, Tome):** Criação de slides com IA."
+      }
+    ]
+  }
+}

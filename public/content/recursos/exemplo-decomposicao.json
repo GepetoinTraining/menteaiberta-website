@@ -1,0 +1,38 @@
+{
+  "title": "Exemplo: Decomposição de Projeto com IA",
+  "week": 9,
+  "description": "Veja um exemplo de conversa com a IA mostrando a decomposição Top-Down do projeto 'Organizar Festa Surpresa'.",
+  "type": "text-content",
+  "content": {
+    "sections": [
+      {
+        "heading": "Objetivo",
+        "text": "Organizar uma festa de aniversário surpresa para 20 pessoas."
+      },
+      {
+        "heading": "Prompt 1 (Fases)",
+        "text": "`Atue como um organizador de eventos profissional. Meu objetivo é organizar uma festa de aniversário surpresa para 20 pessoas. Quebre este projeto em 4 fases principais.`"
+      },
+      {
+        "heading": "Resposta IA (Fases - Exemplo)",
+        "text": "Claro! Podemos dividir em:\n1. Planejamento Inicial & Conceito\n2. Logística & Contratações\n3. Execução no Dia\n4. Pós-Evento"
+      },
+      {
+        "heading": "Prompt 2 (Tarefas da Fase 1)",
+        "text": "`Ótimo. Para a Fase 1: Planejamento Inicial & Conceito, liste 5 tarefas específicas que eu preciso fazer.`"
+      },
+      {
+        "heading": "Resposta IA (Tarefas - Exemplo)",
+        "text": "Perfeito. Para a Fase 1:\n1.1 Definir a lista de convidados (em segredo!).\n1.2 Escolher data e horário.\n1.3 Definir o tema da festa (se houver).\n1.4 Estabelecer um orçamento preliminar.\n1.5 Pesquisar possíveis locais."
+      },
+      {
+        "heading": "Prompt 3 (Detalhes da Tarefa 1.1)",
+        "text": "`Excelente. Para a Tarefa 1.1: Definir a lista de convidados (em segredo!), me dê dicas de como fazer isso sem que o aniversariante descubra.`"
+      },
+      {
+        "heading": "Resposta IA (Detalhes - Exemplo)",
+        "text": "Boa pergunta! Para manter o segredo:\n- Consulte um cúmplice próximo (melhor amigo, familiar).\n- Verifique grupos de WhatsApp em comum discretamente.\n- Pense nos círculos sociais do aniversariante (escola, cursos, etc.).\n- Comece com os mais óbvios e peça ajuda aos cúmplices para lembrar dos outros."
+      }
+    ]
+  }
+}

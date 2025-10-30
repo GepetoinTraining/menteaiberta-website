@@ -1,0 +1,12 @@
+{
+  "title": "Ferramenta Interativa: Gerador de Profissões de 2035",
+  "week": 19,
+  "description": "Explore possíveis novas carreiras que podem surgir com o avanço da IA.",
+  "type": "interactive-tool", // Requires a component with a button to trigger IA call
+  "content": {
+    "instructions": "Clique no botão abaixo para pedir à IA que invente e descreva uma profissão que pode existir em 2035 devido à IA.",
+    "button_label": "Gerar Profissão do Futuro",
+    "prompt_template": "Atue como uma recrutadora de uma empresa de tecnologia em 2035. Invente e descreva UM cargo ou profissão que não existe hoje, mas que será comum por causa do avanço da IA. Descreva sua principal responsabilidade. Seja criativo e plausível. Apresente apenas o nome do cargo e a descrição.",
+    "placeholder": "Componente interativo para gerar profissões do futuro ainda em desenvolvimento." // Placeholder if component not ready
+  }
+}

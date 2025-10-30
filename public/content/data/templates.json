@@ -1,0 +1,11 @@
+{
+  "toolkit-L3": { "week": 3, "title": "Template: Toolkit Pessoal de IA", "description": "Um template simples no Google Slides para organizar suas ferramentas de IA favoritas.", "url": "YOUR_GOOGLE_SLIDE_LINK_HERE" },
+  "workflow-docs-L4": { "week": 4, "title": "Template: Workflow no Google Docs", "description": "Estrutura para documentar seus workflows de IA passo a passo.", "url": "YOUR_GOOGLE_DOC_LINK_HERE" },
+  "apresentacao-L6": { "week": 6, "title": "Template: Apresentação Problema-Solução", "description": "Modelo de Google Slides para pitchs curtos e impactantes.", "url": "YOUR_GOOGLE_SLIDE_LINK_HERE" },
+  "plano-ataque-L9": { "week": 9, "title": "Template: Plano de Ataque de Projeto", "description": "Estrutura no Google Docs para decompor projetos em tarefas.", "url": "YOUR_GOOGLE_DOC_LINK_HERE" },
+  "estacionamento-ideias-L10": { "week": 10, "title": "Template: Estacionamento de Ideias", "description": "Modelo simples no Google Keep ou Notion para anotar ideias futuras.", "url": "YOUR_NOTION_OR_KEEP_LINK_HERE" },
+  "diario-bordo-L12": { "week": 12, "title": "Template: Diário de Bordo", "description": "Modelo no Google Slides para documentar seu progresso diário em um desafio de aprendizado.", "url": "YOUR_GOOGLE_SLIDE_LINK_HERE" },
+  "microaula-L18": { "week": 18, "title": "Template: Plano de Microaula", "description": "Estrutura no Google Docs para planejar uma aula de 3 minutos.", "url": "YOUR_GOOGLE_DOC_LINK_HERE" },
+  "persona-L21": { "week": 21, "title": "Template: Ficha de Persona", "description": "Modelo no Google Docs para criar personas de usuário detalhadas.", "url": "YOUR_GOOGLE_DOC_LINK_HERE" },
+  "pitch-L24": { "week": 24, "title": "Template: Apresentação de Pitch", "description": "Estrutura no Google Slides para pitchs de 3 minutos.", "url": "YOUR_GOOGLE_SLIDE_LINK_HERE" }
+}

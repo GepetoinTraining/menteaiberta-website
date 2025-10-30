@@ -1,0 +1,31 @@
+{
+  "title": "Inspiração: 10 Áreas de Problema Comuns",
+  "week": 21,
+  "description": "Lista de áreas gerais para inspirar seu brainstorm inicial ao procurar um problema para resolver no seu Projeto Capstone.",
+  "type": "text-content",
+  "content": {
+    "sections": [
+      {
+        "heading": "Educação & Aprendizagem",
+        "text": "- Dificuldade em manter o foco nos estudos\n- Procrastinação na entrega de trabalhos\n- Ansiedade antes de provas\n- Falta de conexão entre o conteúdo da escola e o mundo real\n- Dificuldade em encontrar materiais de estudo de qualidade e personalizados"
+      },
+      {
+        "heading": "Saúde & Bem-Estar",
+        "text": "- Dificuldade em manter uma rotina de exercícios\n- Estresse e ansiedade relacionados à vida escolar/social\n- Falta de informação sobre alimentação saudável\n- Gerenciamento do sono"
+      },
+      {
+        "heading": "Vida Social & Comunicação",
+        "text": "- Dificuldade em organizar eventos com amigos\n- Gerenciamento do tempo de uso de redes sociais\n- Conflitos de comunicação em grupos de trabalho\n- Sensação de isolamento ou FOMO (Fear of Missing Out)"
+      },
+      {
+        "heading": "Meio Ambiente & Sustentabilidade",
+        "text": "- Desperdício de comida em casa ou na escola\n- Dificuldade em separar o lixo corretamente\n- Falta de informação sobre como reduzir o consumo de plástico\n- Desconhecimento sobre iniciativas sustentáveis locais"
+      },
+      {
+         "heading": "Organização Pessoal & Finanças",
+         "text": "- Esquecer de devolver itens emprestados (livros, jogos)\n- Dificuldade em gerenciar a mesada ou pequenos gastos\n- Manter o quarto/material escolar organizado\n- Planejar tarefas e gerenciar o tempo"
+      }
+      // Add more categories if desired
+    ]
+  }
+}

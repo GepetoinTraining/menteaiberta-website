@@ -1,0 +1,154 @@
+{
+  "pitch-deck": {
+    "term": "Pitch Deck",
+    "week": 1,
+    "definition": "Uma apresentação de slides curta e visual usada para apresentar uma ideia de negócio a investidores.",
+    "context": null,
+    "relatedTerms": ["mvp", "validacao-ideias", "one-pager"],
+    "subjects": ["Empreendedorismo", "Comunicação", "Design"]
+  },
+  "pivotar": {
+    "term": "Pivotar (Pivot)",
+    "week": 1,
+    "definition": "Um termo de startups que significa mudar a estratégia fundamental de um projeto com base no feedback de usuários, sem abandonar a visão geral.",
+    "context": null,
+    "relatedTerms": ["validacao-ideias", "mvp"],
+    "subjects": ["Empreendedorismo", "Sociologia"]
+  },
+  "capstone": {
+    "term": "Capstone (Projeto Capstone)",
+    "week": 6,
+    "definition": "Um projeto final abrangente que serve como a conclusão de um período de estudos, permitindo que os alunos apliquem todo o conhecimento adquirido.",
+    "context": null,
+    "relatedTerms": ["pitch-deck", "mvp"],
+    "subjects": ["Todas", "Projetos"]
+  },
+  "tarefa": {
+    "term": "Tarefa (Task)",
+    "week": 7,
+    "definition": "O segundo elemento essencial de um prompt, no qual você especifica de forma clara e direta o que deseja que a IA faça (ex: \"resuma\", \"liste\").",
+    "context": "Parte fundamental da Engenharia de Prompt, junto com Papel e Formato.",
+    "relatedTerms": ["engenharia-prompt", "papel-persona", "formato"],
+    "subjects": ["Tecnologia", "Português", "Comunicação"]
+  },
+  "formato": {
+    "term": "Formato (Format)",
+    "week": 7,
+    "definition": "O terceiro elemento essencial, que instrui a IA sobre como estruturar a resposta (ex: \"em uma tabela\", \"em bullet points\").",
+    "context": "Completa a tríade básica da Engenharia de Prompt: Papel, Tarefa, Formato.",
+    "relatedTerms": ["engenharia-prompt", "papel-persona", "tarefa"],
+    "subjects": ["Tecnologia", "Português", "Comunicação"]
+  },
+  "contexto-ia": {
+    "term": "Contexto (em IA)",
+    "week": 8,
+    "definition": "A informação de fundo, os detalhes e os exemplos que você fornece à IA para que ela possa entender a situação específica e evitar dar respostas genéricas.",
+    "context": "Elemento crucial do framework C.R.A.F.T.",
+    "relatedTerms": ["craft", "engenharia-prompt", "few-shot-prompting"],
+    "subjects": ["Tecnologia", "Português", "Comunicação"]
+  },
+  "few-shot-prompting": {
+    "term": "Fornecer Exemplos (Few-shot prompting)",
+    "week": 8,
+    "definition": "Uma técnica de engenharia de prompt onde você inclui um ou mais exemplos do resultado desejado diretamente no prompt para guiar o estilo da IA.",
+    "context": null,
+    "relatedTerms": ["engenharia-prompt", "contexto-ia", "craft"],
+    "subjects": ["Tecnologia", "Português", "Redação"]
+  },
+  "craft": {
+    "term": "C.R.A.F.T.",
+    "week": 8,
+    "definition": "Um acrônimo para um framework de 5 camadas para adicionar contexto a um prompt: Context (Contexto), Role (Papel), Action (Ação), Format (Formato) e Tone (Tom).",
+    "context": "Estrutura avançada para Engenharia de Prompt.",
+    "relatedTerms": ["engenharia-prompt", "contexto-ia", "papel-persona", "tarefa", "formato"],
+    "subjects": ["Tecnologia", "Português", "Redação", "Comunicação"]
+  },
+  "gold-plating": {
+    "term": "Banhado a Ouro (Gold Plating)",
+    "week": 10,
+    "definition": "Uma forma sutil de scope creep na qual se adicionam funcionalidades extras a um projeto que não foram solicitadas, com a intenção de impressionar.",
+    "context": null,
+    "relatedTerms": ["scope-creep", "mvs"],
+    "subjects": ["Projetos", "Empreendedorismo"]
+  },
+  "estacionamento-ideias": {
+    "term": "Estacionamento de Ideias",
+    "week": 10,
+    "definition": "Uma técnica que consiste em criar um local para anotar todas as boas ideias que surgem durante um projeto, mas que estão fora do escopo atual.",
+    "context": "Ajuda a combater o Scope Creep sem perder ideias valiosas.",
+    "relatedTerms": ["scope-creep", "mvs"],
+    "subjects": ["Projetos", "Produtividade", "Empreendedorismo"]
+  },
+  "objetivo-primeiro": {
+    "term": "Abordagem \"Objetivo Primeiro\" (Objective First)",
+    "week": 4,
+    "definition": "Uma estratégia profissional que começa definindo claramente o objetivo final antes de escolher as ferramentas ou desenhar o workflow.",
+    "context": "Fundamental para o design eficaz de workflows.",
+    "relatedTerms": ["workflow", "decomposicao-projetos"],
+    "subjects": ["Projetos", "Produtividade", "Tecnologia"]
+  },
+  "definition-of-done": {
+    "term": "Critérios de \"pronto\" (Definition of Done)",
+    "week": 11,
+    "definition": "Um conjunto de condições objetivas definidas antes do início do refinamento para determinar quando um projeto é considerado \"suficientemente bom\" e finalizado.",
+    "context": "Ajuda a evitar o perfeccionismo no refinamento iterativo.",
+    "relatedTerms": ["refinamento-iterativo", "perfeccionismo"],
+    "subjects": ["Projetos", "Produtividade"]
+  },
+  "lacunas-conhecimento": {
+    "term": "Lacunas (de conhecimento)",
+    "week": 17,
+    "definition": "As partes de um assunto onde o seu entendimento é fraco ou incompleto.",
+    "context": "O principal objetivo da Técnica de Feynman é identificar essas lacunas.",
+    "relatedTerms": ["tecnica-feynman"],
+    "subjects": ["Estudo & Aprendizagem", "Todas"]
+  },
+  "maquina-formatos": {
+    "term": "Máquina de Formatos",
+    "week": 16,
+    "definition": "Uma analogia para descrever a capacidade da IA de pegar um texto base e reformulá-lo em diversos formatos criativos, como quizzes ou mapas mentais.",
+    "context": null,
+    "relatedTerms": ["materiais-estudo-criativos"],
+    "subjects": ["Tecnologia", "Estudo & Aprendizagem", "Criatividade"]
+  },
+  "procrastinacao-produtiva": {
+    "term": "Procrastinação Produtiva",
+    "week": 16,
+    "definition": "A armadilha de passar muito tempo criando materiais de estudo elaborados, dando a sensação de produtividade, em vez de realmente usar esse tempo para estudar.",
+    "context": null,
+    "relatedTerms": ["procrastinacao"],
+    "subjects": ["Produtividade", "Estudo & Aprendizagem"]
+  },
+  "requalificar": {
+    "term": "Requalificar",
+    "week": 19,
+    "definition": "O processo de aprender novas habilidades para se adaptar às novas demandas do mercado de trabalho.",
+    "context": "Importante em cenários de automação e mudança tecnológica.",
+    "relatedTerms": ["habilidades-humanas", "automatizar"],
+    "subjects": ["Sociologia", "Empreendedorismo", "Carreira"]
+  },
+  "falacia-do-gelo": {
+    "term": "Falácia do Gelo",
+    "week": 19,
+    "definition": "Uma analogia usada para explicar como a tecnologia pode não apenas automatizar um trabalho, mas tornar o problema original obsoleto.",
+    "context": "Exemplo: A invenção da geladeira tornou obsoleto o trabalho de 'cortador de gelo'.",
+    "relatedTerms": ["automatizar", "habilidades-humanas"],
+    "subjects": ["História", "Sociologia", "Tecnologia"]
+  },
+  "one-pager": {
+    "term": "One-Pager",
+    "week": 24,
+    "definition": "Um resumo de uma página (ou um único slide) que apresenta todas as informações cruciais de um projeto de forma visual e concisa.",
+    "context": null,
+    "relatedTerms": ["pitch", "pitch-deck"],
+    "subjects": ["Comunicação", "Design", "Empreendedorismo"]
+  },
+  "teste-da-mae": {
+    "term": "\"O Teste da Mãe\" (The Mom Test)",
+    "week": 23,
+    "definition": "Um método para obter feedback honesto de usuários, que consiste em focar a conversa nos problemas da vida deles e no comportamento passado, em vez de falar sobre a sua ideia.",
+    "context": "Técnica crucial para a validação de ideias.",
+    "relatedTerms": ["validacao-ideias", "feedback-qualitivo", "vies-confirmacao"],
+    "subjects": ["Empreendedorismo", "Comunicação", "Sociologia"]
+  }
+}
