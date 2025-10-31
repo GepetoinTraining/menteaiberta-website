@@ -1,6 +1,5 @@
 import React, { useState, useMemo } from 'react';
 import {
-  Stepper,
   Button,
   Group,
   TextInput,
@@ -19,9 +18,11 @@ import {
   Alert,
   Grid,
   Select,
-  MultiSelect, // NOVO
-  Divider,     // NOVO
-  Pill,        // NOVO
+  Divider,
+  Pill,
+  NumberInput, // NOVO: Importado
+  Badge,       // NOVO: Importado
+  CloseButton, // NOVO: Importado
 } from '@mantine/core';
 import { useForm } from '@mantine/form';
 import {
@@ -34,8 +35,11 @@ import {
   IconNumber3,
   IconNumber4,
   IconNumber5,
-  IconPlus, // NOVO
-  IconX,    // NOVO
+  IconPlus,
+  IconX,
+  IconTrash, // NOVO
+  IconHome,  // NOVO
+  IconArmchair, // NOVO
 } from '@tabler/icons-react';
 
 // ... (Componente GeneratedPrompt não mudou) ...
@@ -426,138 +430,138 @@ const masterDatabase = {
     { value: 'duratex_nex_geo_acetinatta', label: 'MDF Duratex Nex Geo (Duratex You | Acetinatta)' },
   ],
   ferragens_dobradicas: [
-    { value: 'fgvtn_dobradica_omnia_l', label: 'Dobradiça Omnia L (Reta/Curva/Alta) [cite: 93]' },
-    { value: 'fgvtn_dobradica_omnia_l_angulo', label: 'Dobradiça Omnia L (Ângulos 30/45/90) [cite: 164]' },
-    { value: 'fgvtn_dobradica_omnia_l_155', label: 'Dobradiça Omnia L 155° [cite: 243]' },
-    { value: 'fgvtn_dobradica_omnia_l_canto', label: 'Dobradiça Omnia L para Canto [cite: 306]' },
-    { value: 'fgvtn_dobradica_omnia_l_aluminio', label: 'Dobradiça Omnia L p/ Portas de Alumínio (Ni/Black) [cite: 347, 351]' },
-    { value: 'fgvtn_dobradica_serie_m_slide_on', label: 'Dobradiça Série M Slide-On 110° [cite: 451]' },
-    { value: 'fgvtn_dobradica_ms_abertura_automatica', label: 'Dobradiça MS Abertura Automática (Push) [cite: 543]' },
-    { value: 'fgvtn_dobradica_ms_sem_mola', label: 'Dobradiça MS sem Mola [cite: 634]' },
-    { value: 'fgvtn_dobradica_click_3d_slow', label: 'Dobradiça FGVTN Click 3D Slow (Reta/Curva/Alta) [cite: 941]' },
-    { value: 'fgvtn_dobradica_click_3d_slow_angulo', label: 'Dobradiça FGVTN Click 3D Slow (Ângulos 30/45/90/165) [cite: 985, 1044]' },
-    { value: 'fgvtn_dobradica_click_slow', label: 'Dobradiça FGVTN Click Slow (Caneco 35/40) [cite: 1148, 1288]' },
-    { value: 'fgvtn_dobradica_ms_slow_next', label: 'Dobradiça MS Slow Next FGVTN [cite: 1340]' },
-    { value: 'fgvtn_dobradica_tn_click_slow', label: 'Dobradiça TN Click Slow (Nova / Easy / Preta / Inox) [cite: 1537, 1586, 1978, 2045, 2065]' },
-    { value: 'fgvtn_dobradica_tn_slide_on', label: 'Dobradiça TN Slide-On (Calço Duplo / Inox) [cite: 1713, 2018, 2158]' },
-    { value: 'fgvtn_dobradica_tn_angulos_especiais', label: 'Dobradiça TN Ângulos Especiais (165°, -45°, 270°) [cite: 1783, 1784, 1807, 1833]' },
-    { value: 'fgvtn_dobradica_tn_mini', label: 'Dobradiça TN Mini (45° / HB) [cite: 1930, 1951]' },
-    { value: 'fgvtn_acessorio_dobradica_limitador', label: 'Acessório: Limitador de Abertura [cite: 1449]' },
-    { value: 'fgvtn_acessorio_dobradica_placa_reparo', label: 'Acessório: Placa de Reparo [cite: 1477]' },
+    { value: 'fgvtn_dobradica_omnia_l', label: 'Dobradiça Omnia L (Reta/Curva/Alta)' },
+    { value: 'fgvtn_dobradica_omnia_l_angulo', label: 'Dobradiça Omnia L (Ângulos 30/45/90)' },
+    { value: 'fgvtn_dobradica_omnia_l_155', label: 'Dobradiça Omnia L 155°' },
+    { value: 'fgvtn_dobradica_omnia_l_canto', label: 'Dobradiça Omnia L para Canto' },
+    { value: 'fgvtn_dobradica_omnia_l_aluminio', label: 'Dobradiça Omnia L p/ Portas de Alumínio (Ni/Black)' },
+    { value: 'fgvtn_dobradica_serie_m_slide_on', label: 'Dobradiça Série M Slide-On 110°' },
+    { value: 'fgvtn_dobradica_ms_abertura_automatica', label: 'Dobradiça MS Abertura Automática (Push)' },
+    { value: 'fgvtn_dobradica_ms_sem_mola', label: 'Dobradiça MS sem Mola' },
+    { value: 'fgvtn_dobradica_click_3d_slow', label: 'Dobradiça FGVTN Click 3D Slow (Reta/Curva/Alta)' },
+    { value: 'fgvtn_dobradica_click_3d_slow_angulo', label: 'Dobradiça FGVTN Click 3D Slow (Ângulos 30/45/90/165)' },
+    { value: 'fgvtn_dobradica_click_slow', label: 'Dobradiça FGVTN Click Slow (Caneco 35/40)' },
+    { value: 'fgvtn_dobradica_ms_slow_next', label: 'Dobradiça MS Slow Next FGVTN' },
+    { value: 'fgvtn_dobradica_tn_click_slow', label: 'Dobradiça TN Click Slow (Nova / Easy / Preta / Inox)' },
+    { value: 'fgvtn_dobradica_tn_slide_on', label: 'Dobradiça TN Slide-On (Calço Duplo / Inox)' },
+    { value: 'fgvtn_dobradica_tn_angulos_especiais', label: 'Dobradiça TN Ângulos Especiais (165°, -45°, 270°)' },
+    { value: 'fgvtn_dobradica_tn_mini', label: 'Dobradiça TN Mini (45° / HB)' },
+    { value: 'fgvtn_acessorio_dobradica_limitador', label: 'Acessório: Limitador de Abertura' },
+    { value: 'fgvtn_acessorio_dobradica_placa_reparo', label: 'Acessório: Placa de Reparo' },
   ],
   ferragens_corredicas: [
-    { value: 'fgvtn_corredica_oculta_unihide_slow', label: 'Corrediça Oculta UniHide Slowmotion [cite: 2198]' },
-    { value: 'fgvtn_corredica_oculta_unihide_onetouch', label: 'Corrediça Oculta UniHide One-Touch [cite: 2268]' },
-    { value: 'fgvtn_corredica_oculta_unihide_slow_3d', label: 'Corrediça Oculta UniHide ET Slow 3D [cite: 2300]' },
-    { value: 'fgvtn_corredica_oculta_fgvtn_slow_et', label: 'Corrediça Oculta FGVTN Slowmotion ET [cite: 2381]' },
-    { value: 'fgvtn_corredica_oculta_fgvtn_onetouch_et', label: 'Corrediça Oculta FGVTN One-Touch ET [cite: 2431]' },
-    { value: 'fgvtn_corredica_oculta_fgvtn_slow_ep', label: 'Corrediça Oculta FGVTN Slowmotion EP (Parcial) [cite: 2471]' },
-    { value: 'fgvtn_corredica_oculta_fgvtn_onetouch_ep', label: 'Corrediça Oculta FGVTN One-Touch EP (Parcial) [cite: 2509]' },
-    { value: 'fgvtn_corredica_oculta_com_pino', label: 'Corrediça Oculta com Pino (ET/EP) [cite: 2594, 2638]' },
-    { value: 'fgvtn_corredica_oculta_slim_slow', label: 'Corrediça Oculta Slim Slow [cite: 2675]' },
-    { value: 'fgvtn_corredica_oculta_tn_slow_et', label: 'Corrediça Oculta TN Slow ET [cite: 2836]' },
-    { value: 'fgvtn_corredica_telescopica_tt45', label: 'Corrediça Telescópica TT 45 (Slow / One-Touch / Self-Closing / Standard) [cite: 2922, 2962, 3294, 3342]' },
-    { value: 'fgvtn_corredica_telescopica_tt44', label: 'Corrediça Telescópica TT 44 (Slow / One-Touch) [cite: 3007, 3059]' },
-    { value: 'fgvtn_corredica_telescopica_tt35', label: 'Corrediça Telescópica TT 35 (Slow / One-Touch) [cite: 3102, 3161]' },
-    { value: 'fgvtn_corredica_telescopica_heavy_duty', label: 'Corrediça Telescópica Heavy Duty (TT58, TT50, TT90) [cite: 3199, 3251, 3556]' },
-    { value: 'fgvtn_corredica_telescopica_h45', label: 'Corrediça Telescópica H45 (Standard / Inox / Inox Slow) [cite: 3584, 3696, 3979]' },
-    { value: 'fgvtn_corredica_telescopica_tn_h_series', label: 'Corrediça Telescópica TN (H45, H35, H30, Mini) [cite: 3847, 3654, 3882, 3912, 3942]' },
-    { value: 'fgvtn_corredica_simples_roldana_tts082', label: 'Corrediça Simples Roldana TTS 082 [cite: 3735]' },
-    { value: 'fgvtn_acessorio_corredica_gatilho_3d', label: 'Acessório: Gatilho 3D para Corrediça Oculta [cite: 2702]' },
+    { value: 'fgvtn_corredica_oculta_unihide_slow', label: 'Corrediça Oculta UniHide Slowmotion' },
+    { value: 'fgvtn_corredica_oculta_unihide_onetouch', label: 'Corrediça Oculta UniHide One-Touch' },
+    { value: 'fgvtn_corredica_oculta_unihide_slow_3d', label: 'Corrediça Oculta UniHide ET Slow 3D' },
+    { value: 'fgvtn_corredica_oculta_fgvtn_slow_et', label: 'Corrediça Oculta FGVTN Slowmotion ET' },
+    { value: 'fgvtn_corredica_oculta_fgvtn_onetouch_et', label: 'Corrediça Oculta FGVTN One-Touch ET' },
+    { value: 'fgvtn_corredica_oculta_fgvtn_slow_ep', label: 'Corrediça Oculta FGVTN Slowmotion EP (Parcial)' },
+    { value: 'fgvtn_corredica_oculta_fgvtn_onetouch_ep', label: 'Corrediça Oculta FGVTN One-Touch EP (Parcial)' },
+    { value: 'fgvtn_corredica_oculta_com_pino', label: 'Corrediça Oculta com Pino (ET/EP)' },
+    { value: 'fgvtn_corredica_oculta_slim_slow', label: 'Corrediça Oculta Slim Slow' },
+    { value: 'fgvtn_corredica_oculta_tn_slow_et', label: 'Corrediça Oculta TN Slow ET' },
+    { value: 'fgvtn_corredica_telescopica_tt45', label: 'Corrediça Telescópica TT 45 (Slow / One-Touch / Self-Closing / Standard)' },
+    { value: 'fgvtn_corredica_telescopica_tt44', label: 'Corrediça Telescópica TT 44 (Slow / One-Touch)' },
+    { value: 'fgvtn_corredica_telescopica_tt35', label: 'Corrediça Telescópica TT 35 (Slow / One-Touch)' },
+    { value: 'fgvtn_corredica_telescopica_heavy_duty', label: 'Corrediça Telescópica Heavy Duty (TT58, TT50, TT90)' },
+    { value: 'fgvtn_corredica_telescopica_h45', label: 'Corrediça Telescópica H45 (Standard / Inox / Inox Slow)' },
+    { value: 'fgvtn_corredica_telescopica_tn_h_series', label: 'Corrediça Telescópica TN (H45, H35, H30, Mini)' },
+    { value: 'fgvtn_corredica_simples_roldana_tts082', label: 'Corrediça Simples Roldana TTS 082' },
+    { value: 'fgvtn_acessorio_corredica_gatilho_3d', label: 'Acessório: Gatilho 3D para Corrediça Oculta' },
   ],
   ferragens_sistemas_abertura: [
-    { value: 'fgvtn_pistao_gas_slim', label: 'Pistão a Gás Slim (Normal / FI) [cite: 5053, 5062]' },
-    { value: 'fgvtn_pistao_gas_amortecedor', label: 'Pistão a Gás com Amortecedor (Cinza/Branco) [cite: 5064, 5065]' },
-    { value: 'fgvtn_pistao_gas_tn', label: 'Pistão a Gás TN (Normal / FI) [cite: 5101, 5102, 5109, 5110]' },
-    { value: 'fgvtn_pistao_gas_tn_mini', label: 'Pistão a Gás TN Mini (Normal / FI) [cite: 5118, 5119, 5124, 5125]' },
-    { value: 'fgvtn_articulador_flap_902', label: 'Articulador Flap FGVTN 902 [cite: 5074]' },
-    { value: 'fgvtn_braco_bvo', label: 'Braço de Abertura Variável BVO [cite: 5081]' },
-    { value: 'fgvtn_articulador_slow_multi', label: 'Articulador Slow Multi [cite: 5083]' },
-    { value: 'fgvtn_aero_flex', label: 'Sistema Bi-partido AeroFlex [cite: 5164]' },
-    { value: 'fgvtn_aero_vert_plus', label: 'Sistema Paralelo AeroVert Plus [cite: 5185]' },
-    { value: 'fgvtn_aero_max_slow', label: 'Sistema de Projeção AeroMax Slow [cite: 5197]' },
-    { value: 'fgvtn_aero_max_touch', label: 'Sistema de Projeção AeroMax Touch [cite: 5213]' },
-    { value: 'fgvtn_aero_smart', label: 'Sistema Basculante AeroSmart [cite: 5226]' },
-    { value: 'fgvtn_aero_vita_slow', label: 'Sistema Basculante AeroVita Slow [cite: 5241]' },
-    { value: 'fgvtn_aero_plus', label: 'Articulador Aero Plus [cite: 5247]' },
-    { value: 'fgvtn_pulsador_magnetico', label: 'Pulsador Magnético (Sobrepor/Embutir/Mini/Industrial) [cite: 5096, 5099, 5131, 5138]' },
-    { value: 'fgvtn_fecho_toque_articulado', label: 'Fecho Toque Articulado TN [cite: 5145]' },
-    { value: 'fgvtn_amortecedor_tn', label: 'Amortecedor TN (Suporte Cruz / Linear) [cite: 5146, 5150]' },
+    { value: 'fgvtn_pistao_gas_slim', label: 'Pistão a Gás Slim (Normal / FI)' },
+    { value: 'fgvtn_pistao_gas_amortecedor', label: 'Pistão a Gás com Amortecedor (Cinza/Branco)' },
+    { value: 'fgvtn_pistao_gas_tn', label: 'Pistão a Gás TN (Normal / FI)' },
+    { value: 'fgvtn_pistao_gas_tn_mini', label: 'Pistão a Gás TN Mini (Normal / FI)' },
+    { value: 'fgvtn_articulador_flap_902', label: 'Articulador Flap FGVTN 902' },
+    { value: 'fgvtn_braco_bvo', label: 'Braço de Abertura Variável BVO' },
+    { value: 'fgvtn_articulador_slow_multi', label: 'Articulador Slow Multi' },
+    { value: 'fgvtn_aero_flex', label: 'Sistema Bi-partido AeroFlex' },
+    { value: 'fgvtn_aero_vert_plus', label: 'Sistema Paralelo AeroVert Plus' },
+    { value: 'fgvtn_aero_max_slow', label: 'Sistema de Projeção AeroMax Slow' },
+    { value: 'fgvtn_aero_max_touch', label: 'Sistema de Projeção AeroMax Touch' },
+    { value: 'fgvtn_aero_smart', label: 'Sistema Basculante AeroSmart' },
+    { value: 'fgvtn_aero_vita_slow', label: 'Sistema Basculante AeroVita Slow' },
+    { value: 'fgvtn_aero_plus', label: 'Articulador Aero Plus' },
+    { value: 'fgvtn_pulsador_magnetico', label: 'Pulsador Magnético (Sobrepor/Embutir/Mini/Industrial)' },
+    { value: 'fgvtn_fecho_toque_articulado', label: 'Fecho Toque Articulado TN' },
+    { value: 'fgvtn_amortecedor_tn', label: 'Amortecedor TN (Suporte Cruz / Linear)' },
   ],
   ferragens_sistemas_deslizantes: [
-    { value: 'fgvtn_sistema_coplanar_fgvtn', label: 'Sistema Deslizante Coplanar (FGVTN / E / M) [cite: 4667, 4681, 4698]' },
-    { value: 'fgvtn_sistema_sds_800_slow', label: 'Sistema Deslizante SDS 800 Slow (1/2/3 portas) [cite: 4726, 4727, 4734, 4735]' },
-    { value: 'fgvtn_sistema_sds_500_slow', label: 'Sistema Deslizante SDS 500 Slow (2/3 portas) [cite: 4764]' },
-    { value: 'fgvtn_rodizio_sd_apoiado_rolamento', label: 'Rodízio Apoiado Rolamento (SD 802, 640, 605, 524, 401, 307, 302, etc) [cite: 4799, 4812, 4862, 4875, 4929, 4947, 4972]' },
-    { value: 'fgvtn_rodizio_sd_apoiado_roldana', label: 'Rodízio Apoiado Roldana (SD 309, 308, 303, 301, 102, 101) [cite: 4937, 4942, 4966, 4973, 4986, 4990]' },
-    { value: 'fgvtn_desempenador_porta', label: 'Desempenador de Porta (Sobreposto / Embutido) [cite: 4994, 5006, 5010]' },
-    { value: 'fgvtn_sistema_softdoor', label: 'Amortecedor para Sistema Deslizante (SoftDoor) [cite: 5027]' },
-    { value: 'fgvtn_sistema_sotello', label: 'Sistema para Porta Escamoteável (Sotello) [cite: 5032]' },
+    { value: 'fgvtn_sistema_coplanar_fgvtn', label: 'Sistema Deslizante Coplanar (FGVTN / E / M)' },
+    { value: 'fgvtn_sistema_sds_800_slow', label: 'Sistema Deslizante SDS 800 Slow (1/2/3 portas)' },
+    { value: 'fgvtn_sistema_sds_500_slow', label: 'Sistema Deslizante SDS 500 Slow (2/3 portas)' },
+    { value: 'fgvtn_rodizio_sd_apoiado_rolamento', label: 'Rodízio Apoiado Rolamento (SD 802, 640, 605, 524, 401, 307, 302, etc)' },
+    { value: 'fgvtn_rodizio_sd_apoiado_roldana', label: 'Rodízio Apoiado Roldana (SD 309, 308, 303, 301, 102, 101)' },
+    { value: 'fgvtn_desempenador_porta', label: 'Desempenador de Porta (Sobreposto / Embutido)' },
+    { value: 'fgvtn_sistema_softdoor', label: 'Amortecedor para Sistema Deslizante (SoftDoor)' },
+    { value: 'fgvtn_sistema_sotello', label: 'Sistema para Porta Escamoteável (Sotello)' },
   ],
   ferragens_gavetas_metalicas: [
-    { value: 'fgvtn_gaveta_avantbox_slow', label: 'Gaveta AvantBox Slowmotion H86 [cite: 5254]' },
-    { value: 'fgvtn_gaveta_avantbox_onetouch', label: 'Gaveta AvantBox One-Touch H86 [cite: 5318]' },
-    { value: 'fgvtn_gaveta_avantbox_slim_baixa', label: 'Gaveta AvantBox Slim Baixa H89 [cite: 5307]' },
-    { value: 'fgvtn_gaveta_avantbox_slim_media', label: 'Gaveta AvantBox Slim Média H121 [cite: 5311]' },
-    { value: 'fgvtn_gaveta_avantbox_slim_alta', label: 'Gaveta AvantBox Slim Alta H185 [cite: 5314]' },
-    { value: 'fgvtn_kit_avantbox_tempero', label: 'Kit AvantBox Porta Tempero [cite: 5260]' },
-    { value: 'fgvtn_kit_avantbox_elevacao_metal', label: 'Kit AvantBox Elevação Metálica [cite: 5285]' },
-    { value: 'fgvtn_kit_avantbox_elevacao_acrilico', label: 'Kit AvantBox Elevação Acrílico [cite: 5293]' },
-    { value: 'fgvtn_divisor_avantbox', label: 'Divisores Internos AvantBox (Horizontal/Vertical) [cite: 5303]' },
-    { value: 'fgvtn_divisor_slim', label: 'Divisores Internos AvantBox Slim [cite: 5315]' },
+    { value: 'fgvtn_gaveta_avantbox_slow', label: 'Gaveta AvantBox Slowmotion H86' },
+    { value: 'fgvtn_gaveta_avantbox_onetouch', label: 'Gaveta AvantBox One-Touch H86' },
+    { value: 'fgvtn_gaveta_avantbox_slim_baixa', label: 'Gaveta AvantBox Slim Baixa H89' },
+    { value: 'fgvtn_gaveta_avantbox_slim_media', label: 'Gaveta AvantBox Slim Média H121' },
+    { value: 'fgvtn_gaveta_avantbox_slim_alta', label: 'Gaveta AvantBox Slim Alta H185' },
+    { value: 'fgvtn_kit_avantbox_tempero', label: 'Kit AvantBox Porta Tempero' },
+    { value: 'fgvtn_kit_avantbox_elevacao_metal', label: 'Kit AvantBox Elevação Metálica' },
+    { value: 'fgvtn_kit_avantbox_elevacao_acrilico', label: 'Kit AvantBox Elevação Acrílico' },
+    { value: 'fgvtn_divisor_avantbox', label: 'Divisores Internos AvantBox (Horizontal/Vertical)' },
+    { value: 'fgvtn_divisor_slim', label: 'Divisores Internos AvantBox Slim' },
   ],
   ferragens_acessorios: [
-    { value: 'fgvtn_acessorio_linha_sense', label: 'Linha Sense (Calceiro, Cesto, Sapateira, Porta-Jóias) [cite: 4087, 4178, 4260, 4342, 4433]' },
-    { value: 'fgvtn_cabideiro_basculante', label: 'Cabideiro Basculante (Sense / Dual Slow / TN) [cite: 4506, 4510, 4591]' },
-    { value: 'fgvtn_calceiro_deslizante', label: 'Calceiro Deslizante (CD 135 / CD / Spin) [cite: 4518, 4526, 4531]' },
-    { value: 'fgvtn_prateleira_basculante_easy_shelf', label: 'Prateleira Basculante Easy Shelf [cite: 4614]' },
-    { value: 'fgvtn_canto_articulado', label: 'Canto Articulado Slow [cite: 4621]' },
-    { value: 'fgvtn_lixeira_automatica', label: 'Lixeira Automática Inox 12L [cite: 4630]' },
-    { value: 'fgvtn_escorredor_loucas', label: 'Kit Escorredor de Louças Inox [cite: 4634]' },
-    { value: 'fgvtn_porta_panos', label: 'Porta-Panos Deslizante [cite: 4642, 4648]' },
-    { value: 'fgvtn_mesa_embutir', label: 'Ferragem Deslizante para Mesa de Embutir [cite: 4653]' },
-    { value: 'fgvtn_porta_pratos', label: 'Porta-Pratos Organizador [cite: 4655]' },
-    { value: 'fgvtn_porta_facas', label: 'Porta-Facas Inox [cite: 4658]' },
-    { value: 'fgvtn_porta_talher', label: 'Porta-Talheres (Plástico / Inox) [cite: 5323, 5328, 5341]' },
-    { value: 'fgvtn_tapete_emborrachado', label: 'Tapete Emborrachado para Gaveta [cite: 5339]' },
-    { value: 'fgvtn_rodizio_gel', label: 'Rodízio Gel (Rolamento / Base Fixa) [cite: 4585, 4603, 4607]' },
-    { value: 'fgvtn_pe_mesa', label: 'Pé de Mesa [cite: 4541]' },
-    { value: 'fgvtn_suporte_dobravel', label: 'Suporte Dobrável para Tampo [cite: 4543, 4550]' },
-    { value: 'fgvtn_prato_giratorio', label: 'Prato Giratório PG 1012 [cite: 4555]' },
-    { value: 'fgvtn_tabua_passar', label: 'Tábua de Passar (TP 450 / 480 / 800) [cite: 4562, 4569, 4579]' },
-    { value: 'fgvtn_qps', label: 'Quadro para Pasta Suspensa (QPS) [cite: 5353, 5363]' },
-    { value: 'fgvtn_ferragem_teclado', label: 'Ferragem Deslizante para Teclado [cite: 5375, 5378, 5381, 5384, 5388]' },
+    { value: 'fgvtn_acessorio_linha_sense', label: 'Linha Sense (Calceiro, Cesto, Sapateira, Porta-Jóias)' },
+    { value: 'fgvtn_cabideiro_basculante', label: 'Cabideiro Basculante (Sense / Dual Slow / TN)' },
+    { value: 'fgvtn_calceiro_deslizante', label: 'Calceiro Deslizante (CD 135 / CD / Spin)' },
+    { value: 'fgvtn_prateleira_basculante_easy_shelf', label: 'Prateleira Basculante Easy Shelf' },
+    { value: 'fgvtn_canto_articulado', label: 'Canto Articulado Slow' },
+    { value: 'fgvtn_lixeira_automatica', label: 'Lixeira Automática Inox 12L' },
+    { value: 'fgvtn_escorredor_loucas', label: 'Kit Escorredor de Louças Inox' },
+    { value: 'fgvtn_porta_panos', label: 'Porta-Panos Deslizante' },
+    { value: 'fgvtn_mesa_embutir', label: 'Ferragem Deslizante para Mesa de Embutir' },
+    { value: 'fgvtn_porta_pratos', label: 'Porta-Pratos Organizador' },
+    { value: 'fgvtn_porta_facas', label: 'Porta-Facas Inox' },
+    { value: 'fgvtn_porta_talher', label: 'Porta-Talheres (Plástico / Inox)' },
+    { value: 'fgvtn_tapete_emborrachado', label: 'Tapete Emborrachado para Gaveta' },
+    { value: 'fgvtn_rodizio_gel', label: 'Rodízio Gel (Rolamento / Base Fixa)' },
+    { value: 'fgvtn_pe_mesa', label: 'Pé de Mesa' },
+    { value: 'fgvtn_suporte_dobravel', label: 'Suporte Dobrável para Tampo' },
+    { value: 'fgvtn_prato_giratorio', label: 'Prato Giratório PG 1012' },
+    { value: 'fgvtn_tabua_passar', label: 'Tábua de Passar (TP 450 / 480 / 800)' },
+    { value: 'fgvtn_qps', label: 'Quadro para Pasta Suspensa (QPS)' },
+    { value: 'fgvtn_ferragem_teclado', label: 'Ferragem Deslizante para Teclado' },
   ],
   ferragens_fechaduras: [
-    { value: 'fgvtn_fechadura_gaveta', label: 'Fechadura para Gaveta (22mm / 32mm) (Ni/Preta) [cite: 5391, 5394, 5396, 5398]' },
-    { value: 'fgvtn_fechadura_sobrepor', label: 'Fechadura de Sobrepor para Gaveta [cite: 5401, 5403]' },
-    { value: 'fgvtn_fechadura_gaveteiro_frontal', label: 'Fechadura Gaveteiro Frontal (1 Aba / 2 Abas / com Barra) [cite: 5405, 5407, 5409]' },
-    { value: 'fgvtn_fechadura_gaveteiro_lateral', label: 'Fechadura Gaveteiro Lateral com Barra [cite: 5411]' },
-    { value: 'fgvtn_fechadura_cremona', label: 'Fechadura Cremona com Lingueta e Acessórios [cite: 5413]' },
-    { value: 'fgvtn_fechadura_porta_vidro', label: 'Fechadura para Porta de Vidro (Simples / Dupla) [cite: 5418, 5421]' },
-    { value: 'fgvtn_fechadura_porta_correr', label: 'Fechadura para Porta de Correr [cite: 5424, 5426, 5428, 5441, 5443]' },
-    { value: 'fgvtn_fechadura_vitrine', label: 'Fechadura Vitrine 140mm [cite: 5430]' },
-    { value: 'fgvtn_fechadura_armario_vertical', label: 'Fechadura para Armário Vertical (22mm / 32mm) [cite: 5432, 5434, 5436]' },
-    { value: 'fgvtn_acessorio_fechadura', label: 'Acessórios de Fechadura (Batentes, Calços, Pinos) [cite: 5445, 5448, 5450, 5453]' },
+    { value: 'fgvtn_fechadura_gaveta', label: 'Fechadura para Gaveta (22mm / 32mm) (Ni/Preta)' },
+    { value: 'fgvtn_fechadura_sobrepor', label: 'Fechadura de Sobrepor para Gaveta' },
+    { value: 'fgvtn_fechadura_gaveteiro_frontal', label: 'Fechadura Gaveteiro Frontal (1 Aba / 2 Abas / com Barra)' },
+    { value: 'fgvtn_fechadura_gaveteiro_lateral', label: 'Fechadura Gaveteiro Lateral com Barra' },
+    { value: 'fgvtn_fechadura_cremona', label: 'Fechadura Cremona com Lingueta e Acessórios' },
+    { value: 'fgvtn_fechadura_porta_vidro', label: 'Fechadura para Porta de Vidro (Simples / Dupla)' },
+    { value: 'fgvtn_fechadura_porta_correr', label: 'Fechadura para Porta de Correr' },
+    { value: 'fgvtn_fechadura_vitrine', label: 'Fechadura Vitrine 140mm' },
+    { value: 'fgvtn_fechadura_armario_vertical', label: 'Fechadura para Armário Vertical (22mm / 32mm)' },
+    { value: 'fgvtn_acessorio_fechadura', label: 'Acessórios de Fechadura (Batentes, Calços, Pinos)' },
   ],
   ferragens_fixacao: [
-    { value: 'fgvtn_dispositivo_minifix_vb', label: 'Dispositivo Montagem (Minifix/VB - FA, FB, FAA45, FBA45) [cite: 5457, 5459, 5463, 5466, 5470, 5471]' },
-    { value: 'fgvtn_parafuso_minifix', label: 'Parafuso Aço (Minifix / Haste Dupla) [cite: 5477, 5479, 5488, 5489, 5490]' },
-    { value: 'fgvtn_parafuso_vb', label: 'Parafuso Zamak (FA/FB) [cite: 5472, 5473, 5474, 5475]' },
-    { value: 'fgvtn_parafuso_uniao', label: 'Parafuso União (Plástico / Niquelado) [cite: 5481]' },
-    { value: 'fgvtn_parafuso_euro', label: 'Parafuso Euro Aço Niquelado [cite: 5483]' },
-    { value: 'fgvtn_bucha_americana', label: 'Bucha Americana Zamak M6 [cite: 5518]' },
-    { value: 'fgvtn_bucha_plastica', label: 'Bucha Plástica (M6 / 1/4" / 10x10) [cite: 5519, 5520]' },
-    { value: 'fgvtn_porca_cilindrica', label: 'Porca Cilíndrica Zamak [cite: 5521]' },
-    { value: 'fgvtn_porca_garra', label: 'Porca Garra M6 [cite: 5542]' },
-    { value: 'fgvtn_suporte_prateleira', label: 'Suporte de Prateleira (Pino, Duplo, 90°, Vidro, Fixo) [cite: 5491, 5492, 5493, 5494, 5495, 5496, 5498, 5499, 5500, 5501]' },
-    { value: 'fgvtn_trava_prateleira', label: 'Trava Prateleira Plástico (16mm / 18mm) [cite: 5504, 5505]' },
-    { value: 'fgvtn_tapa_furo', label: 'Tapa-furo Plástico (ø5, ø8, ø10, ø12) [cite: 5508, 5509, 5510, 5511]' },
-    { value: 'fgvtn_tampa_plastica', label: 'Tampa Plástica (ø14, ø18) [cite: 5513, 5514]' },
-    { value: 'fgvtn_dobradica_invisivel', label: 'Dobradiça Invisível (Branca/Marrom/Preta) [cite: 5528, 5529]' },
-    { value: 'fgvtn_suspensor_armario', label: 'Suspensor de Armário HB65 [cite: 5530]' },
-    { value: 'fgvtn_pe_nivelador', label: 'Pé Nivelador [cite: 5533]' },
-    { value: 'fgvtn_sapata_niveladora', label: 'Sapata Niveladora (D27.5 / D38 Inox / ø32 / ø21) [cite: 5535, 5537, 5540, 5541]' },
+    { value: 'fgvtn_dispositivo_minifix_vb', label: 'Dispositivo Montagem (Minifix/VB - FA, FB, FAA45, FBA45)' },
+    { value: 'fgvtn_parafuso_minifix', label: 'Parafuso Aço (Minifix / Haste Dupla)' },
+    { value: 'fgvtn_parafuso_vb', label: 'Parafuso Zamak (FA/FB)' },
+    { value: 'fgvtn_parafuso_uniao', label: 'Parafuso União (Plástico / Niquelado)' },
+    { value: 'fgvtn_parafuso_euro', label: 'Parafuso Euro Aço Niquelado' },
+    { value: 'fgvtn_bucha_americana', label: 'Bucha Americana Zamak M6' },
+    { value: 'fgvtn_bucha_plastica', label: 'Bucha Plástica (M6 / 1/4" / 10x10)' },
+    { value: 'fgvtn_porca_cilindrica', label: 'Porca Cilíndrica Zamak' },
+    { value: 'fgvtn_porca_garra', label: 'Porca Garra M6' },
+    { value: 'fgvtn_suporte_prateleira', label: 'Suporte de Prateleira (Pino, Duplo, 90°, Vidro, Fixo)' },
+    { value: 'fgvtn_trava_prateleira', label: 'Trava Prateleira Plástico (16mm / 18mm)' },
+    { value: 'fgvtn_tapa_furo', label: 'Tapa-furo Plástico (ø5, ø8, ø10, ø12)' },
+    { value: 'fgvtn_tampa_plastica', label: 'Tampa Plástica (ø14, ø18)' },
+    { value: 'fgvtn_dobradica_invisivel', label: 'Dobradiça Invisível (Branca/Marrom/Preta)' },
+    { value: 'fgvtn_suspensor_armario', label: 'Suspensor de Armário HB65' },
+    { value: 'fgvtn_pe_nivelador', label: 'Pé Nivelador' },
+    { value: 'fgvtn_sapata_niveladora', label: 'Sapata Niveladora (D27.5 / D38 Inox / ø32 / ø21)' },
   ],
   portas_de_vidro: [
     { value: 'porta_vidro_reflecta_bronze_m2', label: 'Porta Vidro Reflecta Bronze (m²)' },
@@ -588,6 +592,7 @@ Estrutura: Laterais sempre inteiriças (do chão ao topo)
 Folga Gaveta: 3mm na largura
 Fundo: 6mm, sempre embutido 20mm da borda traseira`,
   
+  // CUSTOS GENÉRICOS (PARA REFERÊNCIA DA IA, NÃO USADOS DIRETAMENTE NA LISTA)
   custos_materiais: {
     "mdf_branco_tx_18mm": 229.00,
     "mdf_carvalho_18mm": 800.00,
@@ -598,8 +603,8 @@ Fundo: 6mm, sempre embutido 20mm da borda traseira`,
     "dobradica_slow_35mm": 15.00,
     "corredica_400mm": 25.00,
     "puxador_colonial": 30.00,
-    "porta_vidro_reflecta_bronze_m2": 450.00, // Preço exemplo
-    "porta_vidro_laca_preto_m2": 380.00      // Preço exemplo
+    "porta_vidro_reflecta_bronze_m2": 450.00,
+    "porta_vidro_laca_preto_m2": 380.00
   },
 
   custos_mao_de_obra: `# CUSTOS DE MÃO DE OBRA (CONST)
@@ -620,19 +625,30 @@ export default function MarcenariaPromptGenerator() {
   const [active, setActive] = useState(0);
   const [generatedPrompt, setGeneratedPrompt] = useState("");
 
-  // --- NOVOS ESTADOS LOCAIS PARA O PASSO 1 ---
+  // --- NOVOS ESTADOS LOCAIS PARA O PASSO 1 (Material) ---
   const [currentCategory, setCurrentCategory] = useState(null);
-  const [currentItems, setCurrentItems] = useState([]);
+  const [currentItem, setCurrentItem] = useState(null); // Alterado de currentItems (plural)
+  const [currentPrice, setCurrentPrice] = useState(0);    // NOVO
   const [currentUsage, setCurrentUsage] = useState("");
 
   // Usamos um formulário para todos os passos
   const form = useForm({
     initialValues: {
-      // Passo 1
-      cliente_nome: 'Ana Silva',
-      projeto_tipo: 'Closet em L',
-      dimensoes_aprox: 'Parede 1: 2500mm, Parede 2: 1800mm. Altura: 2600mm',
-      material_list: [], // NOVO: Armazena os itens adicionados
+      // --- PASSO 1 ATUALIZADO (GRANULAR) ---
+      cliente_nome: 'Rute Pereira da Silva',
+      projeto_nome: 'Quarto dos Meninos',
+      rooms: [
+        {
+          id: Date.now(),
+          name: 'Quarto Principal',
+          furniture: [
+            { id: Date.now() + 1, name: 'Cômoda', dimensions_mockup: 'Rodapé: 60mm + 4x Gavetas 200mm + 150mm (espaços) + Chapa topo 25mm' },
+            { id: Date.now() + 2, name: 'Armário Aéreo', dimensions_mockup: '1800mm L x 600mm A x 400mm P, 3 portas' }
+          ]
+        }
+      ],
+      material_list: [],
+      // --- FIM DA ATUALIZAÇÃO ---
       
       // Passo 2
       medidas_finais: '2480mm L x 2590mm A x 550mm P',
@@ -649,37 +665,62 @@ export default function MarcenariaPromptGenerator() {
     return masterDatabase[currentCategory] || [];
   }, [currentCategory]);
 
-  // --- NOVAS FUNÇÕES PARA ADICIONAR/REMOVER ITENS ---
+  // --- FUNÇÕES ATUALIZADAS PARA ADICIONAR/REMOVER ITENS (Material) ---
   const handleAddItem = () => {
-    if (!currentCategory || currentItems.length === 0 || !currentUsage) {
+    if (!currentCategory || !currentItem || !currentUsage || currentPrice <= 0) {
       // (Opcional: adicionar notificação de erro)
       return; 
     }
     
-    // Encontra os labels dos itens selecionados para melhor formatação no prompt
-    const selectedItemLabels = currentItems.map(value => {
-      const option = itemOptions.find(opt => opt.value === value);
-      return option ? option.label : value; // Retorna o label amigável
-    });
+    const selectedOption = itemOptions.find(opt => opt.value === currentItem);
 
     form.setFieldValue('material_list', [
       ...form.values.material_list,
       { 
         id: Date.now(), // ID simples para a key do React
         categoria: categoryOptions.find(c => c.value === currentCategory)?.label, // Label amigável
-        items: selectedItemLabels, // Labels amigáveis
+        item_label: selectedOption ? selectedOption.label : currentItem, // Label amigável
+        item_value: currentItem, // O ID do DB (ex: 'arauco_blues_matt')
+        price: currentPrice,
         uso: currentUsage 
       }
     ]);
 
     // Resetar campos de "WIP"
     setCurrentCategory(null);
-    setCurrentItems([]);
+    setCurrentItem(null);
+    setCurrentPrice(0);
     setCurrentUsage("");
   };
 
   const handleRemoveItem = (id) => {
     form.setFieldValue('material_list', form.values.material_list.filter(item => item.id !== id));
+  };
+  // --- FIM DAS FUNÇÕES (Material) ---
+
+  // --- NOVAS FUNÇÕES PARA CÔMODOS E MÓVEIS ---
+  const handleAddNewRoom = () => {
+    form.insertListItem('rooms', {
+      id: Date.now(),
+      name: 'Novo Cômodo',
+      furniture: []
+    });
+  };
+
+  const handleRemoveRoom = (roomIndex) => {
+    form.removeListItem('rooms', roomIndex);
+  };
+
+  const handleAddNewFurniture = (roomIndex) => {
+    form.insertListItem(`rooms.${roomIndex}.furniture`, {
+      id: Date.now(),
+      name: 'Novo Móvel',
+      dimensions_mockup: 'Descreva as dimensões e o mock-up aqui...'
+    });
+  };
+
+  const handleRemoveFurniture = (roomIndex, furnitureIndex) => {
+    form.removeListItem(`rooms.${roomIndex}.furniture`, furnitureIndex);
   };
   // --- FIM DAS NOVAS FUNÇÕES ---
 
@@ -691,36 +732,50 @@ export default function MarcenariaPromptGenerator() {
 
     switch (active) {
       case 0: // Pré-Orçamento
-        // --- PROMPT DO PASSO 1 ATUALIZADO ---
+        // --- PROMPT DO PASSO 1 ATUALIZADO (GRANULAR) ---
+        
+        // 1. Formatar os Cômodos e Móveis
+        const projectStructureText = values.rooms.map(room => {
+          const furnitureText = room.furniture.map(item => 
+            `    * MÓVEL: ${item.name}\n      - Mock-up/Dimensões: ${item.dimensions_mockup}`
+          ).join('\n');
+          
+          return `  - CÔMODO: ${room.name}\n${furnitureText}`;
+        }).join('\n\n');
+
+        // 2. Formatar a Lista de Materiais com Preço
         const materialListText = values.material_list.map(entry =>
-          `- Categoria: ${entry.categoria}\n  Itens: ${entry.items.join(', ')}\n  Uso: ${entry.uso}`
+          `- Categoria: ${entry.categoria}\n  Item: ${entry.item_label} (ID: ${entry.item_value})\n  Preço Unitário (Chapa/Peça): R$ ${entry.price.toFixed(2)}\n  Uso: ${entry.uso}`
         ).join('\n\n');
 
         prompt = `## TAREFA: GERAR UM PRÉ-ORÇAMENTO
 
-## 1. CONTEXTO DO CLIENTE (VARS):
-* **Nome:** ${values.cliente_nome}
-* **Projeto:** ${values.projeto_tipo}
-* **Dimensões Aprox.:** ${values.dimensoes_aprox}
+## 1. CONTEXTO DO PROJETO (VARS):
+* **Cliente:** ${values.cliente_nome}
+* **Projeto:** ${values.projeto_nome}
 
-* **Materiais e Usos (A parte mais importante!):**
+* **Estrutura do Projeto (Cômodos e Móveis):**
+${projectStructureText.length > 0 ? projectStructureText : "Nenhum cômodo definido."}
+
+* **Materiais e Preços de Custo (Definidos por mim):**
 ${materialListText.length > 0 ? materialListText : "Nenhum material especificado."}
 
-## 2. DADOS DO MEU BANCO RELACIONAL (CONSTS):
-# CUSTOS DE MATERIAIS (CONST)
+## 2. DADOS DO MEU BANCO RELACIONAL (CONSTS - PARA SUA REFERÊNCIA):
+# CUSTOS DE MATERIAIS (Referência Genérica)
 ${JSON.stringify(consts.custos_materiais, null, 2)}
 
-# BIBLIOTECA DE FERRAGENS (CONST)
+# BIBLIOTECA DE FERRAGENS (Referência Genérica)
 ${JSON.stringify(consts.biblioteca_ferragens, null, 2)}
 
 ${consts.custos_mao_de_obra}
 
 ## 3. INSTRUÇÕES:
-1. Analise a lista de "Materiais e Usos" e as "Dimensões" para estimar a quantidade de chapas e ferragens.
-2. Use os JSONs de "CUSTOS" para precificar cada item.
-3. Calcule uma *estimativa* de horas de trabalho (marcenaria, montagem, instalação) usando as heurísticas de Mão de Obra.
-4. Some todos os custos e aplique o markup padrão.
-5. Apresente o "Preço Final Estimado" para o cliente.
+1. **Ignorar** os preços genéricos dos "CONSTS" se um item equivalente estiver listado em "Materiais e Preços de Custo (Definidos por mim)". **Use os preços que eu defini como prioridade.**
+2. Analise a "Estrutura do Projeto" e os "Materiais" para estimar a quantidade de chapas e ferragens necessárias.
+3. Use os "Materiais e Preços de Custo" que eu forneci para precificar cada item. Se uma ferragem (ex: dobradiça) não estiver na minha lista, use o preço da "BIBLIOTECA DE FERRAGENS (CONST)".
+4. Calcule uma *estimativa* de horas de trabalho (marcenaria, montagem, instalação) com base nos móveis listados.
+5. Some todos os custos (Materiais + Mão de Obra) e aplique o markup padrão de 40%.
+6. Apresente o "Preço Final Estimado" para o cliente.
 `;
         // --- FIM DA ATUALIZAÇÃO DO PROMPT ---
         break;
@@ -814,16 +869,93 @@ ${consts.padroes_de_construcao}
   
   // O conteúdo de cada passo do Stepper
   const stepsContent = [
-    // --- PASSO 1 ATUALIZADO ---
+    // --- PASSO 1 ATUALIZADO (GRANULAR) ---
     <Stack>
       <Title order={3}>Passo 1: Pré-Orçamento</Title>
-      <TextInput label="Nome do Cliente" {...form.getInputProps('cliente_nome')} />
-      <TextInput label="Tipo de Projeto" {...form.getInputProps('projeto_tipo')} />
-      <Textarea label="Dimensões Aproximadas e Mock-up" minRows={3} {...form.getInputProps('dimensoes_aprox')} />
       
-      <Divider my="md" />
+      {/* 1. DADOS DO CLIENTE E PROJETO */}
+      <Paper withBorder p="md" radius="md">
+        <Stack>
+          <TextInput label="Nome do Cliente" {...form.getInputProps('cliente_nome')} />
+          <TextInput label="Nome do Projeto" {...form.getInputProps('projeto_nome')} />
+        </Stack>
+      </Paper>
 
-      <Title order={5}>Onde serão utilizados cada produto?</Title>
+      {/* 2. DADOS DOS CÔMODOS E MÓVEIS */}
+      <Title order={4} mt="md">Cômodos e Móveis</Title>
+      <Stack gap="md">
+        {form.values.rooms.map((room, roomIndex) => (
+          <Paper key={room.id} withBorder p="md" radius="md" style={{ background: '#fdfdfd' }}>
+            <Stack>
+              <Group justify="space-between">
+                <TextInput
+                  label="Nome do Cômodo"
+                  leftSection={<IconHome size={16} />}
+                  style={{ flex: 1 }}
+                  {...form.getInputProps(`rooms.${roomIndex}.name`)}
+                />
+                <ActionIcon color="red" variant="subtle" onClick={() => handleRemoveRoom(roomIndex)} mt="xl">
+                  <IconTrash size={18} />
+                </ActionIcon>
+              </Group>
+              
+              <Divider />
+              
+              {/* Móveis dentro do cômodo */}
+              <Stack gap="sm" pl="md">
+                {room.furniture.map((item, f_index) => (
+                  <Paper key={item.id} withBorder p="sm" radius="sm" shadow="xs">
+                    <Stack>
+                      <Group justify="space-between">
+                         <TextInput
+                          label="Móvel"
+                          leftSection={<IconArmchair size={16} />}
+                          style={{ flex: 1 }}
+                          {...form.getInputProps(`rooms.${roomIndex}.furniture.${f_index}.name`)}
+                        />
+                         <ActionIcon color="red" variant="subtle" onClick={() => handleRemoveFurniture(roomIndex, f_index)} mt="xl">
+                          <IconX size={16} />
+                        </ActionIcon>
+                      </Group>
+                      <Textarea
+                        label="Dimensões Aproximadas e Mock-up"
+                        placeholder="Descreva o móvel, ex: 1800mm L x 800mm A, 3 portas, 2 gavetas..."
+                        minRows={2}
+                        autosize // <- TEXTBOX FLEXÍVEL
+                        {...form.getInputProps(`rooms.${roomIndex}.furniture.${f_index}.dimensions_mockup`)}
+                      />
+                    </Stack>
+                  </Paper>
+                ))}
+                 <Button
+                  onClick={() => handleAddNewFurniture(roomIndex)}
+                  leftSection={<IconPlus size={16} />}
+                  variant="light"
+                  color="green"
+                  size="xs"
+                  mt="xs"
+                >
+                  Adicionar Móvel
+                </Button>
+              </Stack>
+            </Stack>
+          </Paper>
+        ))}
+        <Button
+          onClick={handleAddNewRoom}
+          leftSection={<IconPlus size={16} />}
+          variant="outline"
+          color="blue"
+          mt="sm"
+        >
+          Adicionar Cômodo
+        </Button>
+      </Stack>
+      
+      <Divider my="xl" />
+
+      {/* 3. DADOS DOS MATERIAIS E PREÇOS */}
+      <Title order={4}>Materiais e Preços de Custo</Title>
       
       {/* Exibir os itens já adicionados */}
       <Stack gap="xs" mt="xs">
@@ -838,12 +970,15 @@ ${consts.padroes_de_construcao}
             title={item.categoria}
             color="gray"
             variant="outline"
-            icon={<IconCheck size={16} />}
           >
             <Text size="sm">**Uso:** {item.uso}</Text>
-            <Group gap="xs" mt="xs">
-              {item.items.map(label => <Pill key={label}>{label}</Pill>)}
+            <Group justify="space-between" mt="xs">
+              <Pill>{item.item_label}</Pill>
+              <Badge color="blue" variant="filled">
+                R$ {item.price.toFixed(2)}
+              </Badge>
             </Group>
+             <Text size="xs" c="dimmed" mt="4px">ID: {item.item_value}</Text>
           </Alert>
         ))}
       </Stack>
@@ -858,32 +993,43 @@ ${consts.padroes_de_construcao}
             value={currentCategory}
             onChange={(value) => {
               setCurrentCategory(value);
-              setCurrentItems([]); // Reseta o multiselect
+              setCurrentItem(null); // Reseta o item
+              setCurrentPrice(0);
             }}
           />
-          <MultiSelect
-            label="2. Itens"
-            placeholder="Selecione os itens"
+          <Select
+            label="2. Item"
+            placeholder="Selecione um item"
             data={itemOptions}
-            value={currentItems}
-            onChange={setCurrentItems}
+            value={currentItem}
+            onChange={setCurrentItem}
             disabled={!currentCategory}
             searchable
             clearable
           />
+          <NumberInput
+            label="3. Preço de Custo (R$)"
+            placeholder="Ex: 229.00"
+            value={currentPrice}
+            onChange={setCurrentPrice}
+            min={0}
+            precision={2}
+            step={10}
+            disabled={!currentItem}
+          />
           <TextInput
-            label="3. Onde/Como será usado?"
+            label="4. Onde/Como será usado?"
             placeholder="Ex: Caixaria interna, Portas, Gavetas..."
             value={currentUsage}
             onChange={(e) => setCurrentUsage(e.currentTarget.value)}
-            disabled={!currentCategory}
+            disabled={!currentItem}
           />
           <Button 
             onClick={handleAddItem}
             leftSection={<IconPlus size={16} />}
-            disabled={!currentCategory || currentItems.length === 0 || !currentUsage}
+            disabled={!currentItem || !currentUsage || currentPrice <= 0}
           >
-            Adicionar Item à Lista
+            Adicionar Material à Lista
           </Button>
         </Stack>
       </Paper>
@@ -1024,4 +1170,3 @@ ${consts.padroes_de_construcao}
     </Container>
   );
 }
-
