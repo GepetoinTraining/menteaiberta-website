@@ -3,6 +3,7 @@ import { AppShell } from '@mantine/core';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
+
 // Core Pages
 import Home from './pages/Home';
 import Sobre from './pages/Sobre';
@@ -27,6 +28,11 @@ import RecursosLandingPage from './pages/RecursosLandingPage.jsx';
 // Glossary Pages
 import GlossaryTermPage from './pages/recursos/GlossaryTermPage.jsx';
 import GlossaryIndexPage from './pages/GlossaryIndexPage.jsx';
+
+// Canva Privado
+import BusinessModelCanvas from './pages/BusinessModelCanvas';
+
+
 
 function App() {
   return (
@@ -66,6 +72,9 @@ function App() {
           {/* Glossary Routes */}
           <Route path="/conhecimento" element={<GlossaryIndexPage />} />
           <Route path="/conhecimento/glossario/:slug" element={<GlossaryTermPage />} />
+
+          {/* Canva Privado Route */}
+          <Route path="/canvas-privado" element={<BusinessModelCanvas />} />
 
         </Routes>
         <Footer />
